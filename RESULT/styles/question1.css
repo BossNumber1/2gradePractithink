@@ -33,7 +33,7 @@
 /* content styles */
 
 .content1 {
-    top: 112px;
+    top: 90px;
     left: calc(50% - 684px / 2);
     width: 684px;
     height: 90px;
@@ -43,17 +43,16 @@
     /* border: 1px solid; */
 }
 
-.content1 input {
+.content1 div {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     padding: 6px 16px;
-    width: 88px;
-    height: 30px;
+    width: 70px;
+    height: 45px;
+    border: 1px solid #2f2f2f;
     box-sizing: border-box;
     border-radius: 5px;
-    text-align: center;
-    margin-left: 8px;
-    border: 1px solid;
+    cursor: pointer;
 }
