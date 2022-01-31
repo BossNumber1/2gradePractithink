@@ -71,6 +71,8 @@ body {
 
 .subtitle,
 .subtitle3,
+.subtitle4,
+.subtitle5,
 .subtitle6,
 .subtitle8,
 .subtitle9,
@@ -101,11 +103,19 @@ body {
 }
 
 .subtitle8 {
-    margin-top: 10px;
+    margin-top: 20px;
 }
 
 .subtitle {
     margin-top: 35px;
+}
+
+.subtitle4 {
+    margin-top: 50px;
+}
+
+.subtitle5 {
+    margin-top: 10px;
 }
 
 .subtitle14 {
