@@ -34,44 +34,23 @@
 
 .content2 {
     top: 100px;
-    left: calc(50% - 351.69px / 2);
-    width: 351.69px;
-    height: 276px;
-}
+    left: calc(50% - 417px / 2);
+    width: 417px;
+    height: 30px;
 
-.figure2 {
-    width: 182px;
-    height: 149px;
-}
-
-.input2 {
     display: flex;
     align-items: center;
-    justify-content: flex-start;
-    top: 100px;
-    left: calc(50% - 246px / 2);
-    width: 246px;
-    height: 30px;
+    justify-content: space-between;
+
+    border: 1px solid orange;
 }
 
-.input2 input {
-    display: flex;
-    padding: 6px 16px;
-    width: 64px;
+.content2 input {
+    /* position: static; */
+    width: 40px;
     height: 30px;
-    border: 1px solid #2f2f2f;
-    box-sizing: border-box;
-    border-radius: 5px;
-    text-align: center;
-    margin-right: 10px;
-    margin-left: 40px;
-}
-
-.input2:not(input) {
-    font-style: normal;
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 18px;
-    color: #2f2f2f;
+    /* left: 38px;
+    top: 0px; */
+    margin: 0px 5px;
     text-align: center;
 }

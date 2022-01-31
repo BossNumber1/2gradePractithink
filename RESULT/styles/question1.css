@@ -34,13 +34,15 @@
 
 .content1 {
     top: 90px;
-    left: calc(50% - 684px / 2);
-    width: 684px;
-    height: 90px;
+    left: calc(50% - 474px / 2);
+    width: 474px;
+    height: 45px;
+
     display: flex;
     align-items: center;
     justify-content: space-between;
-    /* border: 1px solid; */
+
+    border: 1px solid orange;
 }
 
 .content1 div {

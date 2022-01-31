@@ -37,26 +37,13 @@
 
 .content8 {
     top: 100px;
-    left: calc(50% - 410px / 2);
-    width: 410px;
-    height: 194px;
+    left: calc(50% - 666px / 2);
+    width: 666px;
+    height: 45px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-}
-
-.leftColumn8,
-.rightColumn8 {
-    width: 155px;
-    height: 194px;
-}
-
-.leftColumn8 div,
-.rightColumn8 div {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    margin-bottom: 25px;
+    border: 1px solid orange;
 }
 
 .content8 input {

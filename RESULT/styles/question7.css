@@ -34,12 +34,13 @@
 
 .content7 {
     top: 102px;
-    left: calc(50% - 760px / 2);
-    width: 760px;
-    height: 90px;
+    left: calc(50% - 442px / 2);
+    width: 442px;
+    height: 30px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    border: 1px solid orange;
 }
 
 .content7 input {
