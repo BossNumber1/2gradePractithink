@@ -35,58 +35,35 @@
 /* content styles */
 
 .content10 {
-    top: 100px;
+    top: 130px;
     left: calc(50% - 698px / 2);
     width: 698px;
     height: 172px;
-    border: 1px solid orange;
 }
 
-.arrows10 {
-    top: -113px;
-    left: 35px;
-    height: 70px;
-    width: 335px;
+.img10 {
+    width: 698px;
+    height: 77px;
 }
 
-.arrows10 img:nth-child(2) {
-    position: absolute;
-    top: 50px;
-    left: 165px;
+.input10 {
+    top: 47px;
+    left: calc(50% - 103px / 2);
+    width: 103px;
+    height: 45px;
 }
 
-/* leftArrow styles */
-
-.leftArrow {
-    position: absolute;
-    top: -51px;
+.input10 input {
     display: flex;
-    left: 165px;
-    height: 100px;
-    width: 100px;
-}
-
-.imgRuler {
-    position: absolute;
-    margin-left: -330px;
-}
-
-.leftEdge,
-.rightEdge {
-    display: flex;
-    width: 50px;
-    height: 57px;
-    position: absolute;
-    cursor: pointer;
-}
-
-.leftEdge {
-    top: 30px;
-    left: -170px;
-    z-index: 1;
-}
-
-.rightEdge {
-    top: 80px;
-    left: -41px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 6px 16px;
+    width: 103px;
+    height: 45px;
+    background: #ffffff;
+    border: 1px solid #2f2f2f;
+    box-sizing: border-box;
+    border-radius: 5px;
+    text-align: center;
 }
