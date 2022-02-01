@@ -39,11 +39,7 @@
     top: 100px;
     left: calc(50% - 666px / 2);
     width: 666px;
-    height: 45px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border: 1px solid orange;
+    height: 120px;
 }
 
 .content8 input {
@@ -57,4 +53,34 @@
     border-radius: 5px;
     box-sizing: border-box;
     text-align: center;
+}
+
+.topRow8,
+.bottomRow8 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.topRow8 div,
+.bottomRow8 div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 6px 10px;
+    width: 202px;
+    height: 45px;
+    border: 1px solid #2f2f2f;
+    box-sizing: border-box;
+    border-radius: 5px;
+
+    cursor: pointer;
+}
+
+.bottomRow8 {
+    top: 30px;
+    left: calc(50% - 434px / 2);
+    width: 434px;
+    height: 45px;
 }
