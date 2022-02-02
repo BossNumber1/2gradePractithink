@@ -454,8 +454,10 @@ function addMiniIcon(elem, status) {
             elem.offsetLeft + widthAdjacentElement / 2 - 7 + "px";
     }
 
-    if (elem.parentElement.parentElement.className === "content5") {
-        objDiv.style.marginTop = "-55px";
+    if (
+        elem.parentElement.parentElement.parentElement.className === "content5"
+    ) {
+        objDiv.style.marginTop = "-25px";
         objDiv.style.marginLeft =
             elem.offsetLeft + widthAdjacentElement / 2 - 7 + "px";
     }
@@ -1249,17 +1251,36 @@ function question4() {
 
 let numbers5 = {
     firstNumber: "",
+    secondNumber: "",
+    thirdNumber: "",
+    fourthNumber: "",
+    fifthNumber: "",
+    sixthNumber: "",
 };
 
-// gettingDataFromFields(1, [3], 5, numbers5);
+gettingDataFromFields(6, [3, 3, 3, 3, 3, 15], 5, numbers5);
 
 function question5() {
-    if (numbers5.firstNumber != "") {
-        succerrorAndCreateMiniIcon(1, 5, numbers5);
+    if (
+        numbers5.firstNumber !== "" &&
+        numbers5.secondNumber !== "" &&
+        numbers5.thirdNumber !== "" &&
+        numbers5.fourthNumber !== "" &&
+        numbers5.fifthNumber !== "" &&
+        numbers5.sixthNumber !== ""
+    ) {
+        succerrorAndCreateMiniIcon(6, 5, numbers5);
 
         // выносим общий статус к номеру вопроса
 
-        if (numbers5.firstNumber === "right") {
+        if (
+            numbers5.firstNumber === "right" &&
+            numbers5.secondNumber === "right" &&
+            numbers5.thirdNumber === "right" &&
+            numbers5.fourthNumber === "right" &&
+            numbers5.fifthNumber === "right" &&
+            numbers5.sixthNumber === "right"
+        ) {
             addImage(
                 "success",
                 document.getElementsByClassName("question5"),
@@ -1277,7 +1298,7 @@ function question5() {
             // addCorrectAnswerQuestion5();
         }
     } else {
-        highlightUnselectedBlocks(1, 5, numbers5);
+        highlightUnselectedBlocks(6, 5, numbers5);
     }
 }
 
@@ -2034,7 +2055,7 @@ document.getElementById("submit").onclick = function () {
     question2();
     // question3();
     // question4();
-    // question5();
+    question5();
     // question6();
     // question7();
     // question8();
