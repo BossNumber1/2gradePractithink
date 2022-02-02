@@ -34,48 +34,84 @@
 
 .content9 {
     top: 100px;
-    left: calc(50% - 407px / 2);
-    width: 407px;
-    height: 93px;
+    left: calc(50% - 543px / 2);
+    width: 543px;
+    height: 265px;
+}
+
+.cubes9 {
+    left: calc(50% - 543px / 2);
+    width: 543px;
+    height: 217px;
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    border: 1px solid orange;
-}
-
-.leftColumn9 {
-    width: 140px;
-    height: 93px;
-}
-
-.rightColumn9 {
-    width: 167px;
-    height: 93px;
-}
-
-.topRow9,
-.bottomRow9 {
-    display: flex;
     align-items: center;
-    justify-content: flex-start;
-    margin-bottom: 25px;
 }
 
-.topRow9 {
-    margin-top: 15px;
-}
-
-.content9 input {
+.leftWarehouse9 {
+    width: 222.36px;
+    height: 189.43px;
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    top: -15px;
-    width: 25.06px;
-    height: 21.01px;
-    border: 1px solid #2f2f2f;
-    box-sizing: border-box;
+}
+
+.columnDice9 div {
+    margin: -10.7px 0;
+    cursor: grab;
+}
+
+.columnDice9 {
+    margin-right: 6.7px;
+}
+
+.betweenWarehouses9 {
+    width: 20px;
+    height: 5px;
+    background: #2f2f2f;
+}
+
+.rightWarehouse9 {
+    width: 224px;
+    height: 188px;
+    display: flex;
+}
+
+/* 2. inputs styles */
+
+.inputsCollection9 {
+    top: 10px;
+    left: calc(50% - 200px / 2);
+    display: flex;
+    width: 200px;
+    height: 37px;
+}
+
+.inputContent9 input {
+    width: 50px;
+    height: 30px;
+    border: 1.5px solid #2f2f2f;
     border-radius: 5px;
-    margin: 0 10px 0 5px;
     text-align: center;
+}
+
+.inputsCollection9 div:not(:last-child) {
+    margin-right: 5px;
+}
+
+#minus9,
+#equation9 {
+    top: 5px;
+    height: 22px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    color: #2f2f2f;
+}
+
+#minus9 {
+    width: 7px;
+}
+
+#equation9 {
+    width: 11px;
 }
