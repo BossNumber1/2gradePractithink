@@ -493,6 +493,12 @@ function addMiniIcon(elem, status) {
         objDiv.style.marginTop = "-55px";
     }
 
+    if (
+        elem.parentElement.parentElement.parentElement.className === "content9"
+    ) {
+        objDiv.style.marginTop = "-25px";
+    }
+
     if (elem.parentElement.parentElement.className === "content16") {
         objDiv.style.marginTop = "-25px";
     }
@@ -1450,27 +1456,24 @@ let numbers9 = {
     firstNumber: "",
     secondNumber: "",
     thirdNumber: "",
-    fourthNumber: "",
 };
 
-// gettingDataFromFields(4, [2, 3, 4, 5], 9, numbers9);
+gettingDataFromFields(3, [42, 37, 5], 9, numbers9);
 
 function question9() {
     if (
         numbers9.firstNumber != "" &&
         numbers9.secondNumber != "" &&
-        numbers9.thirdNumber != "" &&
-        numbers9.fourthNumber != ""
+        numbers9.thirdNumber != ""
     ) {
-        succerrorAndCreateMiniIcon(4, 9, numbers9);
+        succerrorAndCreateMiniIcon(3, 9, numbers9);
 
         // выносим общий статус к номеру вопроса
 
         if (
             numbers9.firstNumber === "right" &&
             numbers9.secondNumber === "right" &&
-            numbers9.thirdNumber === "right" &&
-            numbers9.fourthNumber === "right"
+            numbers9.thirdNumber === "right"
         ) {
             addImage(
                 "success",
@@ -1486,10 +1489,10 @@ function question9() {
                 9
             );
 
-            addCorrectAnswerQuestion9();
+            // addCorrectAnswerQuestion9();
         }
     } else {
-        highlightUnselectedBlocks(4, 9, numbers9);
+        highlightUnselectedBlocks(3, 9, numbers9);
     }
 }
 
@@ -2038,7 +2041,7 @@ document.getElementById("submit").onclick = function () {
     // question6();
     question7();
     // question8();
-    // question9();
+    question9();
     // question10();
     // question11();
     // question12();
