@@ -22,46 +22,109 @@
 }
 
 .lineUnderHeading13 {
+    top: 100px;
     position: absolute;
     width: 1169px;
     height: 0px;
-    top: 70px;
     border-bottom: 1px solid #a8a8a8;
 }
 
 /* content styles */
 
 .content13 {
-    top: 100px;
-    left: calc(50% - 520px / 2);
-    width: 520px;
-    height: 194px;
+    top: 90px;
+    left: calc(50% - 570px / 2);
+    width: 570px;
+    height: 370.83px;
+}
+
+.topRow13 {
+    width: 358.64px;
+    height: 96.77px;
+}
+
+.centerRow13 {
+    top: 10px;
+    height: 57px;
+    cursor: grab;
+}
+
+/* bottom row styles */
+
+.bottomRow13 {
+    top: 40px;
+    left: calc(50% - 369px / 2);
+    width: 369px;
+    height: 177px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border: 1px solid orange;
 }
 
 .leftColumn13,
 .rightColumn13 {
-    width: 210px;
-    height: 194px;
+    width: 185px;
+    height: 177px;
+}
+
+.leftColumn13 div,
+.rightColumn13 div {
+    width: 185px;
+    height: 45px;
+    border: 1px solid;
 }
 
 .leftColumn13 div,
 .rightColumn13 div {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    margin-bottom: 25px;
+    justify-content: center;
 }
 
-.content13 input {
-    width: 54px;
+.bottomRow13 input {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    width: 61px;
     height: 30px;
+    background: #ffffff;
     border: 1px solid #2f2f2f;
     box-sizing: border-box;
     border-radius: 5px;
-    margin-left: 10px;
+    margin-right: 20px;
     text-align: center;
+}
+
+.leftColumn13 div input:nth-child(1),
+.rightColumn13 div input:nth-child(1) {
+    margin-left: 20px;
+}
+
+.leftColumn13 div:nth-child(1),
+.rightColumn13 div:nth-child(1) {
+    width: 185px;
+    height: 45px;
+    background: #68c2d0;
+    border: 1px solid #cccccc;
+    color: white;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.leftColumn13 div:nth-child(2),
+.leftColumn13 div:nth-child(3),
+.leftColumn13 div:nth-child(4) {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.leftColumn13 div,
+.rightColumn13 div {
+    border: 1px solid #cccccc;
 }
