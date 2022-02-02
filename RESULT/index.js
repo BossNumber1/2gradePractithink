@@ -1344,45 +1344,24 @@ let numbers7 = {
     firstNumber: "",
     secondNumber: "",
     thirdNumber: "",
-    fourthNumber: "",
 };
 
-// gettingDataFromFields(4, [0.15, 0.16, 0.42, 0.4], 7, numbers7);
+gettingDataFromFields(3, [7, 0, 6], 7, numbers7);
 
 function question7() {
     if (
         numbers7.firstNumber != "" &&
         numbers7.secondNumber != "" &&
-        numbers7.thirdNumber != "" &&
-        numbers7.fourthNumber != ""
+        numbers7.thirdNumber != ""
     ) {
-        succerror(
-            document.getElementById("firstNumber7"),
-            numbers7.firstNumber === "wrong"
-        );
-
-        succerror(
-            document.getElementById("secondNumber7"),
-            numbers7.secondNumber === "wrong"
-        );
-
-        succerror(
-            document.getElementById("thirdNumber7"),
-            numbers7.thirdNumber === "wrong"
-        );
-
-        succerror(
-            document.getElementById("fourthNumber7"),
-            numbers7.fourthNumber === "wrong"
-        );
+        succerrorAndCreateMiniIcon(3, 7, numbers7);
 
         // выносим общий статус к номеру вопроса
 
         if (
             numbers7.firstNumber === "right" &&
             numbers7.secondNumber === "right" &&
-            numbers7.thirdNumber === "right" &&
-            numbers7.fourthNumber === "right"
+            numbers7.thirdNumber === "right"
         ) {
             addImage(
                 "success",
@@ -1398,10 +1377,10 @@ function question7() {
                 7
             );
 
-            addCorrectAnswerQuestion7();
+            // addCorrectAnswerQuestion7();
         }
     } else {
-        highlightUnselectedBlocks(4, 7, numbers7);
+        highlightUnselectedBlocks(3, 7, numbers7);
     }
 }
 
@@ -2057,7 +2036,7 @@ document.getElementById("submit").onclick = function () {
     // question4();
     question5();
     // question6();
-    // question7();
+    question7();
     // question8();
     // question9();
     // question10();
