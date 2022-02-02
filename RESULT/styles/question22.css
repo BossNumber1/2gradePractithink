@@ -32,49 +32,9 @@
 /* content styles */
 
 .content22 {
-    top: 119px;
-    left: calc(50% - 878px / 2);
-    width: 878px;
-    height: 102px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    /* border: 1px solid; */
+    top: 120px;
+    left: calc(50% - 370px / 2);
+    width: 370px;
+    height: 195px;
     border: 1px solid orange;
-}
-
-.content22 input {
-    position: static;
-    width: 40px;
-    height: 30px;
-    flex: none;
-    order: 1;
-    flex-grow: 0;
-    margin: 0px 10px;
-    border-radius: 5px;
-    border: 1px solid #2f2f2f;
-    text-align: center;
-}
-
-.top1row22,
-.top2row22,
-.bottom1row22,
-.bottom2row22 {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    width: 348px;
-    height: 30px;
-    margin-bottom: 40px;
-    /* border: 1px solid orange; */
-}
-
-.leftBlock22 {
-    width: 348px;
-    height: 102px;
-}
-
-.rightBlock22 {
-    width: 342px;
-    height: 102px;
 }

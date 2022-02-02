@@ -33,24 +33,36 @@
 /* content styles */
 
 .content20 {
-    top: 100px;
-    left: calc(50% - 395px / 2);
-    width: 395px;
-    height: 140.46px;
+    top: 140px;
+    left: calc(50% - 570px / 2);
+    width: 570px;
+    height: 339.69px;
     border: 1px solid orange;
 }
 
 .content20 div {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    margin-bottom: 25px;
+    border: 1px solid;
 }
 
-.content20 input {
-    width: 57px;
-    height: 30.15px;
-    border: 1px solid;
-    border-radius: 5px;
-    text-align: center;
+.topRow20 {
+    left: calc(50% - 169px / 2);
+    width: 169px;
+    height: 60px;
+    margin-bottom: 55px;
+}
+
+.centerRow20 {
+    height: 161px;
+    margin-bottom: 20px;
+}
+
+.bottomRow20 {
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.bottomRow20 img {
+    cursor: grab;
 }
