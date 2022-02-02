@@ -463,16 +463,7 @@ function addMiniIcon(elem, status) {
     }
 
     if (elem.parentElement.parentElement.className === "content10") {
-        objDiv.style.width = "70px";
-
-        if (elem.className === "firstInput10") {
-            objDiv.style.marginLeft =
-                elem.offsetLeft + widthAdjacentElement / 2 - 335 + "px";
-        } else if (elem.className === "secondInput10") {
-            objDiv.style.marginLeft = "-30px";
-        }
-
-        objDiv.style.marginRight = "130px";
+        objDiv.style.marginTop = "-25px";
     }
 
     if (
@@ -1498,7 +1489,39 @@ function question9() {
 
 // 10 QUESTION
 
-// тут был пропеллер
+let numbers10 = {
+    firstNumber: "",
+};
+
+gettingDataFromFields(1, ["14 + 4 = 18"], 10, numbers10);
+
+function question10() {
+    if (numbers10.firstNumber != "") {
+        succerrorAndCreateMiniIcon(1, 10, numbers10);
+
+        // выносим общий статус к номеру вопроса
+
+        if (numbers10.firstNumber === "right") {
+            addImage(
+                "success",
+                document.getElementsByClassName("question10"),
+                "app10",
+                10
+            );
+        } else {
+            addImage(
+                "failure",
+                document.getElementsByClassName("question10"),
+                "app10",
+                10
+            );
+
+            // addCorrectAnswerQuestion10();
+        }
+    } else {
+        highlightUnselectedBlocks(1, 10, numbers10);
+    }
+}
 
 // 11 QUESTION
 
@@ -1719,17 +1742,21 @@ function question13() {
 
 let numbers14 = {
     firstNumber: "",
+    secondNumber: "",
 };
 
-// gettingDataFromFields(1, [0.52], 14, numbers14);
+gettingDataFromFields(2, [77, 13], 14, numbers14);
 
 function question14() {
-    if (numbers14.firstNumber != "") {
-        succerrorAndCreateMiniIcon(1, 14, numbers14);
+    if (numbers14.firstNumber != "" && numbers14.secondNumber != "") {
+        succerrorAndCreateMiniIcon(2, 14, numbers14);
 
         // выносим общий статус к номеру вопроса
 
-        if (numbers14.firstNumber === "right") {
+        if (
+            numbers14.firstNumber === "right" &&
+            numbers14.secondNumber === "right"
+        ) {
             addImage(
                 "success",
                 document.getElementsByClassName("question14"),
@@ -1744,10 +1771,10 @@ function question14() {
                 14
             );
 
-            addCorrectAnswerQuestion14();
+            // addCorrectAnswerQuestion14();
         }
     } else {
-        highlightUnselectedBlocks(1, 14, numbers14);
+        highlightUnselectedBlocks(2, 14, numbers14);
     }
 }
 
@@ -2042,11 +2069,11 @@ document.getElementById("submit").onclick = function () {
     question7();
     // question8();
     question9();
-    // question10();
+    question10();
     // question11();
     // question12();
     // question13();
-    // question14();
+    question14();
     // question15();
     // question16();
     // question17();
