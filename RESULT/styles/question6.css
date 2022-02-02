@@ -38,3 +38,14 @@
     width: 698px;
     height: 43px;
 }
+
+.selectCircle {
+    width: 43px;
+    height: 43px;
+    top: -35px;
+    left: 58px;
+    background: rgba(54, 156, 183, 0.08);
+    border: 3px solid #369cb7;
+    border-radius: 50px;
+    box-sizing: border-box;
+}
