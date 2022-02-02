@@ -36,43 +36,88 @@
 
 .content21 {
     top: 100px;
-    left: calc(50% - 430px / 2);
-    width: 430px;
-    height: 268.32px;
-    border: 1px solid orange;
-}
-
-.figure21 {
-    left: calc(50% - 215.86px / 2);
-    width: 215.86px;
-    height: 193.32px;
-}
-
-/* btns styles */
-
-.btns21 {
-    top: 29px;
-    left: calc(50% - 430px / 2);
-    width: 430px;
-    height: 45px;
+    left: calc(50% - 768px / 2);
+    width: 768px;
+    height: 370px;
     display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-}
-
-.btns21 div:not(.statusMiniIcon) {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
     align-items: center;
-    padding: 6px 16px;
-    position: static;
-    width: 70px;
+    justify-content: space-between;
+}
+
+.graph21 {
+    width: 366.69px;
+    height: 359.08px;
+}
+
+.table21 {
+    width: 369px;
+    height: 221px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.leftColumn21,
+.rightColumn21 {
+    width: 185px;
+    height: 221px;
+}
+
+/* rows styles */
+
+.first1row21,
+.second1row21,
+.third1row21,
+.fourth1row21,
+.fifth1row21,
+.first2row21,
+.second2row21,
+.third2row21,
+.fourth2row21,
+.fifth2row21 {
+    width: 199.54px;
     height: 45px;
-    background: #fff;
+    background: #ffffff;
+    border: 1px solid #cccccc;
+    box-sizing: border-box;
+    padding-top: 12.5px;
+    text-align: center;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.first1row21,
+.first2row21 {
+    background: #68c2d0;
+    color: white;
+}
+
+.first1row21,
+.second1row21,
+.third1row21,
+.fourth1row21,
+.fifth1row21,
+.first2row21 {
+    font-weight: 600;
+}
+
+.second2row21,
+.third2row21,
+.fourth2row21,
+.fifth2row21 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.table21 input {
+    margin-top: -13px;
+    width: 61px;
+    height: 30px;
+    background: #ffffff;
     border: 1px solid #2f2f2f;
     box-sizing: border-box;
     border-radius: 5px;
-    margin-right: 20px;
-    cursor: pointer;
+    text-align: center;
 }
