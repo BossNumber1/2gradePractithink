@@ -26,12 +26,6 @@ document.getElementById("firstBtn1").onclick = function () {
     nameSelectedBtn1 = "firstBtn1";
 
     commonForSelectBtn("firstBtn1");
-    commonForNoselectedBtn([
-        "secondBtn1",
-        "thirdBtn1",
-        "fourthBtn1",
-        "fifthBtn1",
-    ]);
 };
 
 document.getElementById("secondBtn1").onclick = function () {
@@ -110,6 +104,96 @@ document.getElementById("secondBtn4").onclick = function () {
 
     commonForSelectBtn("secondBtn4");
     commonForNoselectedBtn(["firstBtn4"]);
+};
+
+// 8 QUESTION
+
+let selectBtn8 = "",
+    nameSelectedBtn8 = "";
+
+document.getElementById("firstBtn8").onclick = function () {
+    selectBtn8 = "right";
+    nameSelectedBtn8 = "firstBtn8";
+
+    commonForSelectBtn("firstBtn8");
+};
+
+document.getElementById("secondBtn8").onclick = function () {
+    selectBtn8 = "wrong";
+    nameSelectedBtn8 = "secondBtn8";
+
+    commonForSelectBtn("secondBtn8");
+};
+
+document.getElementById("thirdBtn8").onclick = function () {
+    selectBtn8 = "wrong";
+    nameSelectedBtn8 = "thirdBtn8";
+
+    commonForSelectBtn("thirdBtn8");
+};
+
+document.getElementById("fourthBtn8").onclick = function () {
+    selectBtn8 = "wrong";
+    nameSelectedBtn8 = "fourthBtn8";
+
+    commonForSelectBtn("fourthBtn8");
+};
+
+document.getElementById("fifthBtn8").onclick = function () {
+    selectBtn8 = "wrong";
+    nameSelectedBtn8 = "fifthBtn8";
+
+    commonForSelectBtn("fifthBtn8");
+};
+
+// 15 QUESTION
+
+let selectBtn15 = "",
+    nameSelectedBtn15 = "";
+
+document.getElementById("firstBtn15").onclick = function () {
+    selectBtn15 = "right";
+    nameSelectedBtn15 = "firstBtn15";
+
+    commonForSelectBtn("firstBtn15");
+    commonForNoselectedBtn(["secondBtn15"]);
+};
+
+document.getElementById("secondBtn15").onclick = function () {
+    selectBtn15 = "wrong";
+    nameSelectedBtn15 = "secondBtn15";
+
+    commonForSelectBtn("secondBtn15");
+    commonForNoselectedBtn(["firstBtn15"]);
+};
+
+// 18 QUESTION
+
+let selectBtn18 = "",
+    nameSelectedBtn18 = "";
+
+document.getElementById("firstBtn18").onclick = function () {
+    selectBtn18 = "right";
+    nameSelectedBtn18 = "firstBtn18";
+
+    commonForSelectBtn("firstBtn18");
+    commonForNoselectedBtn(["secondBtn18", "thirdBtn18"]);
+};
+
+document.getElementById("secondBtn18").onclick = function () {
+    selectBtn18 = "wrong";
+    nameSelectedBtn18 = "secondBtn18";
+
+    commonForSelectBtn("secondBtn18");
+    commonForNoselectedBtn(["firstBtn18", "thirdBtn18"]);
+};
+
+document.getElementById("thirdBtn18").onclick = function () {
+    selectBtn18 = "wrong";
+    nameSelectedBtn18 = "thirdBtn18";
+
+    commonForSelectBtn("thirdBtn18");
+    commonForNoselectedBtn(["firstBtn18", "secondBtn18"]);
 };
 
 // ------------------------------------------------------------ ALL DRAG AND DROP -------------------------------------------------------------
