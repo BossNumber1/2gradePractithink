@@ -1319,13 +1319,27 @@ function question3() {
         document.getElementById("firstBtn3").style.border = "2px solid #FFB47D";
         document.getElementById("secondBtn3").style.border =
             "2px solid #FFB47D";
+        document.getElementById("thirdBtn3").style.border = "2px solid #FFB47D";
     }
 }
 
 // 4 QUESTION
 
+let numbers4 = {
+    firstNumber: "",
+    secondNumber: "",
+    thirdNumber: "",
+};
+
+gettingDataFromFields(3, [6, 6, 12], 4, numbers4);
+
 function question4() {
-    if (selectBtn4 !== "") {
+    if (
+        selectBtn4 !== "" &&
+        numbers4.firstNumber !== "" &&
+        numbers4.secondNumber !== "" &&
+        numbers4.thirdNumber !== ""
+    ) {
         succerror(
             document.getElementById(nameSelectedBtn4),
             selectBtn4 === "wrong"
@@ -1333,7 +1347,12 @@ function question4() {
 
         // выносим общий статус к номеру вопроса
 
-        if (selectBtn4 === "right") {
+        if (
+            selectBtn4 === "right" &&
+            numbers4.firstNumber === "right" &&
+            numbers4.secondNumber === "right" &&
+            numbers4.thirdNumber === "right"
+        ) {
             addImage(
                 "success",
                 document.getElementsByClassName("question4"),
@@ -1341,6 +1360,21 @@ function question4() {
                 4
             );
         } else {
+            succerror(
+                document.getElementById("firstNumber4"),
+                numbers4.firstNumber === "wrong"
+            );
+
+            succerror(
+                document.getElementById("secondNumber4"),
+                numbers4.secondNumber === "wrong"
+            );
+
+            succerror(
+                document.getElementById("thirdNumber4"),
+                numbers4.thirdNumber === "wrong"
+            );
+
             addImage(
                 "failure",
                 document.getElementsByClassName("question4"),
@@ -1351,9 +1385,14 @@ function question4() {
             // addCorrectAnswerQuestion4();
         }
     } else {
-        document.getElementById("firstBtn4").style.border = "2px solid #FFB47D";
-        document.getElementById("secondBtn4").style.border =
-            "2px solid #FFB47D";
+        if (selectBtn4 === "") {
+            document.getElementById("firstBtn4").style.border =
+                "2px solid #FFB47D";
+            document.getElementById("secondBtn4").style.border =
+                "2px solid #FFB47D";
+        }
+
+        highlightUnselectedBlocks(3, 4, numbers4);
     }
 }
 
