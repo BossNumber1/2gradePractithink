@@ -128,3 +128,24 @@
 .rightColumn13 div {
     border: 1px solid #cccccc;
 }
+
+/* ruler styles */
+
+.ruler {
+    position: absolute;
+    display: flex;
+}
+
+.leftEdge,
+.rightEdge {
+    display: flex;
+    width: 50px;
+    height: 57px;
+    position: absolute;
+    z-index: 2;
+    cursor: pointer;
+}
+
+.rightEdge {
+    left: 91%;
+}
