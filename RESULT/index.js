@@ -950,7 +950,7 @@ function question1() {
                 1
             );
 
-            addCorrectAnswerQuestion1();
+            // addCorrectAnswerQuestion1();
         }
     } else {
         highlightUnselectedBlocks(4, 1, numbers1);
@@ -1097,7 +1097,7 @@ function question3() {
                 3
             );
 
-            addCorrectAnswerQuestion3();
+            // addCorrectAnswerQuestion3();
         }
     } else {
         highlightingUnfillededBlocks(6, 3);
@@ -1205,7 +1205,7 @@ function question4() {
                 4
             );
 
-            addCorrectAnswerQuestion4();
+            // addCorrectAnswerQuestion4();
         }
     } else if (
         contentBasketTrue.length === 1 &&
@@ -1328,7 +1328,7 @@ function question6() {
                 6
             );
 
-            addCorrectAnswerQuestion6();
+            // addCorrectAnswerQuestion6();
         }
     } else {
         highlightUnselectedBlocks(1, 6, numbers6);
@@ -1434,7 +1434,7 @@ function question8() {
                 8
             );
 
-            addCorrectAnswerQuestion8();
+            // addCorrectAnswerQuestion8();
         }
     } else {
         highlightUnselectedBlocks(6, 8, numbers8);
@@ -1576,7 +1576,7 @@ function question11() {
                 11
             );
 
-            addCorrectAnswerQuestion11();
+            // addCorrectAnswerQuestion11();
         }
     } else {
         highlightUnselectedBlocks(6, 11, numbers11);
@@ -1671,7 +1671,7 @@ function question12() {
                 12
             );
 
-            addCorrectAnswerQuestion12();
+            // addCorrectAnswerQuestion12();
         }
     } else {
         highlightingUnfillededBlocks(4, 12);
@@ -1731,7 +1731,7 @@ function question13() {
                 13
             );
 
-            addCorrectAnswerQuestion13();
+            // addCorrectAnswerQuestion13();
         }
     } else {
         highlightUnselectedBlocks(6, 13, numbers13);
@@ -1838,7 +1838,7 @@ function question15() {
                 15
             );
 
-            addCorrectAnswerQuestion15();
+            // addCorrectAnswerQuestion15();
         }
     } else {
         highlightUnselectedBlocks(4, 15, numbers15);
@@ -1884,7 +1884,7 @@ function question16() {
                 16
             );
 
-            addCorrectAnswerQuestion16();
+            // addCorrectAnswerQuestion16();
         }
     } else {
         highlightUnselectedBlocks(3, 16, numbers16);
@@ -1919,7 +1919,7 @@ function question17() {
                 17
             );
 
-            addCorrectAnswerQuestion17();
+            // addCorrectAnswerQuestion17();
         }
     } else {
         highlightingUnfillededBlocks(1, 17);
@@ -1968,7 +1968,7 @@ function question18() {
                 18
             );
 
-            addCorrectAnswerQuestion18();
+            // addCorrectAnswerQuestion18();
         }
     } else {
         highlightUnselectedBlocks(4, 18, numbers18);
@@ -2004,7 +2004,7 @@ function question19() {
                 19
             );
 
-            addCorrectAnswerQuestion19();
+            // addCorrectAnswerQuestion19();
         }
     } else {
         highlightUnselectedBlocks(1, 19, numbers19);
@@ -2050,7 +2050,7 @@ function question20() {
                 20
             );
 
-            addCorrectAnswerQuestion20();
+            // addCorrectAnswerQuestion20();
         }
     } else {
         highlightUnselectedBlocks(3, 20, numbers20);
