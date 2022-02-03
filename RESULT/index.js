@@ -260,7 +260,7 @@ function addCorrectAnswerQuestion7() {
 }
 
 function addCorrectAnswerQuestion8() {
-    document.getElementsByClassName("app8")[0].style.height = "850px";
+    document.getElementsByClassName("app8")[0].style.height = "700px";
     addCorrectAnswer("correctAnswer8", "8que", "app8", "contentCorrectAnswer8");
 }
 
@@ -290,7 +290,7 @@ function addCorrectAnswerQuestion11() {
 }
 
 function addCorrectAnswerQuestion12() {
-    document.getElementsByClassName("app12")[0].style.height = "700px";
+    document.getElementsByClassName("app12")[0].style.height = "750px";
     addCorrectAnswer(
         "correctAnswer12",
         "12que",
@@ -320,7 +320,7 @@ function addCorrectAnswerQuestion14() {
 }
 
 function addCorrectAnswerQuestion15() {
-    document.getElementsByClassName("app15")[0].style.height = "900px";
+    document.getElementsByClassName("app15")[0].style.height = "800px";
     addCorrectAnswer(
         "correctAnswer15",
         "15que",
@@ -340,17 +340,17 @@ function addCorrectAnswerQuestion16() {
 }
 
 function addCorrectAnswerQuestion17() {
-    document.getElementsByClassName("app17")[0].style.height = "500px";
+    document.getElementsByClassName("app17")[0].style.height = "900px";
     addCorrectAnswer(
         "correctAnswer17",
         "17que",
         "app17",
-        "contentCorrectAnswer"
+        "contentCorrectAnswer17"
     );
 }
 
 function addCorrectAnswerQuestion18() {
-    document.getElementsByClassName("app18")[0].style.height = "500px";
+    document.getElementsByClassName("app18")[0].style.height = "450px";
     addCorrectAnswer(
         "correctAnswer18",
         "18que",
@@ -365,7 +365,7 @@ function addCorrectAnswerQuestion19() {
         "correctAnswer19",
         "19que",
         "app19",
-        "contentCorrectAnswer"
+        "contentCorrectAnswer19"
     );
 }
 
@@ -380,7 +380,7 @@ function addCorrectAnswerQuestion20() {
 }
 
 function addCorrectAnswerQuestion21() {
-    document.getElementsByClassName("app21")[0].style.height = "700px";
+    document.getElementsByClassName("app21")[0].style.height = "900px";
     addCorrectAnswer(
         "correctAnswer21",
         "21que",
@@ -2180,25 +2180,34 @@ document.getElementById("submit").onclick = function () {
     question7();
     addCorrectAnswerQuestion7();
     // question8();
+    addCorrectAnswerQuestion8();
     question9();
     addCorrectAnswerQuestion9();
     question10();
     addCorrectAnswerQuestion10();
     // question11();
+    addCorrectAnswerQuestion11();
     // question12();
+    addCorrectAnswerQuestion12();
     question13();
     question14();
     addCorrectAnswerQuestion14();
     // question15();
+    addCorrectAnswerQuestion15();
     question16();
     addCorrectAnswerQuestion16();
     // question17();
+    addCorrectAnswerQuestion17();
     // question18();
+    addCorrectAnswerQuestion18();
     // question19();
+    addCorrectAnswerQuestion19();
     question20();
     addCorrectAnswerQuestion20();
     // question21();
+    addCorrectAnswerQuestion21();
     question22();
     addCorrectAnswerQuestion22();
     // question23();
+    addCorrectAnswerQuestion23();
 };
