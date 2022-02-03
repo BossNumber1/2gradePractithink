@@ -91,6 +91,27 @@ document.getElementById("thirdBtn3").onclick = function () {
     commonForNoselectedBtn(["firstBtn3", "secondBtn3"]);
 };
 
+// 4 QUESTION
+
+let selectBtn4 = "",
+    nameSelectedBtn4 = "";
+
+document.getElementById("firstBtn4").onclick = function () {
+    selectBtn4 = "right";
+    nameSelectedBtn4 = "firstBtn4";
+
+    commonForSelectBtn("firstBtn4");
+    commonForNoselectedBtn(["secondBtn4"]);
+};
+
+document.getElementById("secondBtn4").onclick = function () {
+    selectBtn4 = "wrong";
+    nameSelectedBtn4 = "secondBtn4";
+
+    commonForSelectBtn("secondBtn4");
+    commonForNoselectedBtn(["firstBtn4"]);
+};
+
 // ------------------------------------------------------------ ALL DRAG AND DROP -------------------------------------------------------------
 
 // common commands
