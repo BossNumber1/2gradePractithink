@@ -86,6 +86,35 @@ document.getElementById("fifthBtn1").onclick = function () {
     ]);
 };
 
+// 3 QUESTION
+
+let selectBtn3 = "",
+    nameSelectedBtn3 = "";
+
+document.getElementById("firstBtn3").onclick = function () {
+    selectBtn3 = "right";
+    nameSelectedBtn3 = "firstBtn3";
+
+    commonForSelectBtn("firstBtn3");
+    commonForNoselectedBtn(["secondBtn3", "thirdBtn3"]);
+};
+
+document.getElementById("secondBtn3").onclick = function () {
+    selectBtn3 = "wrong";
+    nameSelectedBtn3 = "secondBtn3";
+
+    commonForSelectBtn("secondBtn3");
+    commonForNoselectedBtn(["firstBtn3", "thirdBtn3"]);
+};
+
+document.getElementById("thirdBtn3").onclick = function () {
+    selectBtn3 = "wrong";
+    nameSelectedBtn3 = "thirdBtn3";
+
+    commonForSelectBtn("thirdBtn3");
+    commonForNoselectedBtn(["firstBtn3", "secondBtn3"]);
+};
+
 // ------------------------------------------------------------ ALL DRAG AND DROP -------------------------------------------------------------
 
 // common commands
