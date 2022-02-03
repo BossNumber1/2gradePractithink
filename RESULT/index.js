@@ -1903,33 +1903,42 @@ let numbers13 = {
     sixthNumber: "",
 };
 
-gettingDataFromFields(
-    6,
-    ["17/12", "8/7", "2", "2", "11/8", "11/8"],
-    13,
-    numbers13
-);
+gettingDataFromFields(6, [5, "", 2, "1/2", 3, ""], 13, numbers13);
 
 function question13() {
     if (
         numbers13.firstNumber !== "" &&
-        numbers13.secondNumber !== "" &&
         numbers13.thirdNumber !== "" &&
         numbers13.fourthNumber !== "" &&
-        numbers13.fifthNumber !== "" &&
-        numbers13.sixthNumber !== ""
+        numbers13.fifthNumber !== ""
     ) {
-        succerrorAndCreateMiniIcon(6, 13, numbers13);
+        succerror(
+            document.getElementById("firstNumber13"),
+            numbers13.firstNumber === "wrong"
+        );
+
+        succerror(
+            document.getElementById("thirdNumber13"),
+            numbers13.thirdNumber === "wrong"
+        );
+
+        succerror(
+            document.getElementById("fourthNumber13"),
+            numbers13.fourthNumber === "wrong"
+        );
+
+        succerror(
+            document.getElementById("fifthNumber13"),
+            numbers13.thirdNumber === "wrong"
+        );
 
         // выносим общий статус к номеру вопроса
 
         if (
             numbers13.firstNumber === "right" &&
-            numbers13.secondNumber === "right" &&
             numbers13.thirdNumber === "right" &&
             numbers13.fourthNumber === "right" &&
-            numbers13.fifthNumber === "right" &&
-            numbers13.sixthNumber === "right"
+            numbers13.fifthNumber === "right"
         ) {
             addImage(
                 "success",
