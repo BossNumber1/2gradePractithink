@@ -604,27 +604,27 @@ function question1() {
         } else {
             // подсветим невыбранные блоки
             if (selectedButton1.firstBtn1 === "") {
-                document.getElementById("firstBtn6").style.border =
+                document.getElementById("firstBtn1").style.border =
                     "2px solid #FFB47D";
             }
 
             if (selectedButton1.secondBtn1 === "") {
-                document.getElementById("secondBtn6").style.border =
+                document.getElementById("secondBtn1").style.border =
                     "2px solid #FFB47D";
             }
 
             if (selectedButton1.thirdBtn1 === "") {
-                document.getElementById("thirdBtn6").style.border =
+                document.getElementById("thirdBtn1").style.border =
                     "2px solid #FFB47D";
             }
 
             if (selectedButton1.fourthBtn1 === "") {
-                document.getElementById("fourthBtn6").style.border =
+                document.getElementById("fourthBtn1").style.border =
                     "2px solid #FFB47D";
             }
 
             if (selectedButton1.fifthBtn1 === "") {
-                document.getElementById("fifthBtn6").style.border =
+                document.getElementById("fifthBtn1").style.border =
                     "2px solid #FFB47D";
             }
 
@@ -701,43 +701,98 @@ document.getElementById("secondBtn4").onclick = function () {
 
 // 8 QUESTION
 
-let selectBtn8 = "",
-    nameSelectedBtn8 = "";
+let selectedButton8 = {
+    firstBtn8: "",
+    secondBtn8: "",
+    thirdBtn8: "",
+    fourthBtn8: "",
+    fifthBtn8: "",
+};
 
 document.getElementById("firstBtn8").onclick = function () {
-    selectBtn8 = "right";
-    nameSelectedBtn8 = "firstBtn8";
-
     commonForSelectBtn("firstBtn8");
+
+    selectedButton8.firstBtn8 = "wrong";
 };
 
 document.getElementById("secondBtn8").onclick = function () {
-    selectBtn8 = "wrong";
-    nameSelectedBtn8 = "secondBtn8";
-
     commonForSelectBtn("secondBtn8");
+
+    selectedButton8.secondBtn8 = "right";
 };
 
 document.getElementById("thirdBtn8").onclick = function () {
-    selectBtn8 = "wrong";
-    nameSelectedBtn8 = "thirdBtn8";
-
     commonForSelectBtn("thirdBtn8");
+
+    selectedButton8.thirdBtn8 = "wrong";
 };
 
 document.getElementById("fourthBtn8").onclick = function () {
-    selectBtn8 = "wrong";
-    nameSelectedBtn8 = "fourthBtn8";
-
     commonForSelectBtn("fourthBtn8");
+
+    selectedButton8.fourthBtn8 = "right";
 };
 
 document.getElementById("fifthBtn8").onclick = function () {
-    selectBtn8 = "wrong";
-    nameSelectedBtn8 = "fifthBtn8";
-
     commonForSelectBtn("fifthBtn8");
+
+    selectedButton8.fifthBtn8 = "wrong";
 };
+
+function question8() {
+    let selectedButtons = [],
+        namesSelectedButtons = [],
+        isTheArrayEmpty = 0;
+
+    for (let key in selectedButton8) {
+        if (selectedButton8[key] !== "") {
+            selectedButtons.push(selectedButton8[key]);
+            namesSelectedButtons.push(key);
+            isTheArrayEmpty++;
+        }
+    }
+
+    if (isTheArrayEmpty > 0) {
+        namesSelectedButtons.map((el, index) => {
+            succerror(
+                document.getElementById(el),
+                selectedButtons[index] === "wrong"
+            );
+        });
+
+        // выносим общий статус к номеру вопроса
+
+        if (
+            selectedButton8.secondBtn8 === "right" &&
+            selectedButton8.fourthBtn8 === "right"
+        ) {
+            addImage(
+                "success",
+                document.getElementsByClassName("question8"),
+                "app8",
+                8
+            );
+        } else {
+            // придадим статуса
+            addImage(
+                "failure",
+                document.getElementsByClassName("question8"),
+                "app8",
+                8
+            );
+
+            // addCorrectAnswerQuestion8();
+        }
+    } else {
+        document.getElementById("firstBtn8").style.border = "2px solid #FFB47D";
+        document.getElementById("secondBtn8").style.border =
+            "2px solid #FFB47D";
+        document.getElementById("thirdBtn8").style.border = "2px solid #FFB47D";
+        document.getElementById("fourthBtn8").style.border =
+            "2px solid #FFB47D";
+        document.getElementById("fifthBtn8").style.border = "2px solid #FFB47D";
+    }
+}
 
 // 15 QUESTION
 
@@ -1436,66 +1491,6 @@ function question7() {
         }
     } else {
         highlightUnselectedBlocks(3, 7, numbers7);
-    }
-}
-
-// 8 QUESTION
-
-let numbers8 = {
-    firstNumber: "",
-    secondNumber: "",
-    thirdNumber: "",
-    fourthNumber: "",
-    fifthNumber: "",
-    sixthNumber: "",
-};
-
-// gettingDataFromFields(
-//     6,
-//     ["1/6", "1/6", "2/15", "1/8", "1/8", "1/9"],
-//     8,
-//     numbers8
-// );
-
-function question8() {
-    if (
-        numbers8.firstNumber !== "" &&
-        numbers8.secondNumber !== "" &&
-        numbers8.thirdNumber !== "" &&
-        numbers8.fourthNumber !== "" &&
-        numbers8.fifthNumber !== "" &&
-        numbers8.sixthNumber !== ""
-    ) {
-        succerrorAndCreateMiniIcon(6, 8, numbers8);
-
-        // выносим общий статус к номеру вопроса
-
-        if (
-            numbers8.firstNumber === "right" &&
-            numbers8.secondNumber === "right" &&
-            numbers8.thirdNumber === "right" &&
-            numbers8.fourthNumber === "right" &&
-            numbers8.fifthNumber === "right" &&
-            numbers8.sixthNumber === "right"
-        ) {
-            addImage(
-                "success",
-                document.getElementsByClassName("question8"),
-                "app8",
-                8
-            );
-        } else {
-            addImage(
-                "failure",
-                document.getElementsByClassName("question8"),
-                "app8",
-                8
-            );
-
-            // addCorrectAnswerQuestion8();
-        }
-    } else {
-        highlightUnselectedBlocks(6, 8, numbers8);
     }
 }
 
@@ -2214,7 +2209,7 @@ document.getElementById("submit").onclick = function () {
     addCorrectAnswerQuestion6();
     question7();
     addCorrectAnswerQuestion7();
-    // question8();
+    question8();
     addCorrectAnswerQuestion8();
     question9();
     addCorrectAnswerQuestion9();
