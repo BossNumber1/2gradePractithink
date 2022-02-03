@@ -800,7 +800,7 @@ let selectBtn15 = "",
     nameSelectedBtn15 = "";
 
 document.getElementById("firstBtn15").onclick = function () {
-    selectBtn15 = "right";
+    selectBtn15 = "wrong";
     nameSelectedBtn15 = "firstBtn15";
 
     commonForSelectBtn("firstBtn15");
@@ -808,7 +808,7 @@ document.getElementById("firstBtn15").onclick = function () {
 };
 
 document.getElementById("secondBtn15").onclick = function () {
-    selectBtn15 = "wrong";
+    selectBtn15 = "right";
     nameSelectedBtn15 = "secondBtn15";
 
     commonForSelectBtn("secondBtn15");
@@ -1842,50 +1842,16 @@ function question14() {
 
 // 15 QUESTION
 
-let numbers15 = {
-    firstNumber: "",
-    secondNumber: "",
-    thirdNumber: "",
-    fourthNumber: "",
-};
-
-// gettingDataFromFields(4, [5, 6, 7, 11], 15, numbers15);
-
 function question15() {
-    if (
-        numbers15.firstNumber != "" &&
-        numbers15.secondNumber != "" &&
-        numbers15.thirdNumber != "" &&
-        numbers15.fourthNumber != ""
-    ) {
+    if (selectBtn15 !== "") {
         succerror(
-            document.getElementById("firstNumber15"),
-            numbers15.firstNumber === "wrong"
-        );
-
-        succerror(
-            document.getElementById("secondNumber15"),
-            numbers15.secondNumber === "wrong"
-        );
-
-        succerror(
-            document.getElementById("thirdNumber15"),
-            numbers15.thirdNumber === "wrong"
-        );
-
-        succerror(
-            document.getElementById("fourthNumber15"),
-            numbers15.fourthNumber === "wrong"
+            document.getElementById(nameSelectedBtn15),
+            selectBtn15 === "wrong"
         );
 
         // выносим общий статус к номеру вопроса
 
-        if (
-            numbers15.firstNumber === "right" &&
-            numbers15.secondNumber === "right" &&
-            numbers15.thirdNumber === "right" &&
-            numbers15.fourthNumber === "right"
-        ) {
+        if (selectBtn15 === "right") {
             addImage(
                 "success",
                 document.getElementsByClassName("question15"),
@@ -1903,7 +1869,10 @@ function question15() {
             // addCorrectAnswerQuestion15();
         }
     } else {
-        highlightUnselectedBlocks(4, 15, numbers15);
+        document.getElementById("firstBtn15").style.border =
+            "2px solid #FFB47D";
+        document.getElementById("secondBtn15").style.border =
+            "2px solid #FFB47D";
     }
 }
 
@@ -2222,7 +2191,7 @@ document.getElementById("submit").onclick = function () {
     question13();
     question14();
     addCorrectAnswerQuestion14();
-    // question15();
+    question15();
     addCorrectAnswerQuestion15();
     question16();
     addCorrectAnswerQuestion16();
