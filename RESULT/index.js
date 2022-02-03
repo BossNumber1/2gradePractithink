@@ -2094,14 +2094,67 @@ function question16() {
 
 // 17 QUESTION
 
-function question17() {
-    // получаем содежимое блоков
-    let topRow17 =
-        document.getElementsByClassName("topRow17")[0].children[1].id;
+let selectBtn17 = "right",
+    btnSelectedName17;
 
-    if (topRow17 !== "firstEmpty17") {
-        // проверяем на верность для создания статуса
-        if (topRow17 === "firstBtn17") {
+document.getElementById("firstCollection17").onclick = function () {
+    document
+        .getElementById("firstCollection17")
+        .classList.toggle("selectedPicture17");
+    document
+        .getElementById("secondCollection17")
+        .classList.remove("selectedPicture17");
+    document
+        .getElementById("thirdCollection17")
+        .classList.remove("selectedPicture17");
+
+    selectBtn17 = "right";
+    btnSelectedName17 = "firstCollection17";
+};
+
+document.getElementById("secondCollection17").onclick = function () {
+    document
+        .getElementById("secondCollection17")
+        .classList.toggle("selectedPicture17");
+    document
+        .getElementById("firstCollection17")
+        .classList.remove("selectedPicture17");
+    document
+        .getElementById("thirdCollection17")
+        .classList.remove("selectedPicture17");
+
+    selectBtn17 = "wrong";
+    btnSelectedName17 = "secondCollection17";
+};
+
+document.getElementById("thirdCollection17").onclick = function () {
+    document
+        .getElementById("thirdCollection17")
+        .classList.toggle("selectedPicture17");
+    document
+        .getElementById("firstCollection17")
+        .classList.remove("selectedPicture17");
+    document
+        .getElementById("secondCollection17")
+        .classList.remove("selectedPicture17");
+
+    selectBtn17 = "wrong";
+    btnSelectedName17 = "thirdCollection17";
+};
+
+function question17() {
+    if (btnSelectedName17) {
+        if (selectBtn17 === "right") {
+            document
+                .getElementById(btnSelectedName17)
+                .classList.toggle("success17");
+        } else {
+            document
+                .getElementById(btnSelectedName17)
+                .classList.toggle("error17");
+        }
+
+        if (selectBtn17 === "right") {
             addImage(
                 "success",
                 document.getElementsByClassName("question17"),
@@ -2109,10 +2162,6 @@ function question17() {
                 17
             );
         } else {
-            document.getElementsByClassName(
-                "topRow17"
-            )[0].children[1].style.border = "2px solid #ED7777";
-
             addImage(
                 "failure",
                 document.getElementsByClassName("question17"),
@@ -2123,7 +2172,12 @@ function question17() {
             // addCorrectAnswerQuestion17();
         }
     } else {
-        highlightingUnfillededBlocks(1, 17);
+        document
+            .getElementById("firstCollection17")
+            .classList.remove("selectedPicture17");
+
+        document.getElementsByClassName("bottomRow17")[0].style.border =
+            "1px solid #FFB47D";
     }
 }
 
@@ -2415,7 +2469,7 @@ document.getElementById("submit").onclick = function () {
     addCorrectAnswerQuestion15();
     question16();
     addCorrectAnswerQuestion16();
-    // question17();
+    question17();
     addCorrectAnswerQuestion17();
     question18();
     addCorrectAnswerQuestion18();
