@@ -1020,6 +1020,49 @@ function drop17(e) {
     orignalElement.id = currentId;
 }
 
+// 20 QUESTION
+
+// для полей ввода
+
+function drag20(e) {
+    localStorage.setItem("idSign20", e.target.id);
+}
+
+function drop20(e) {
+    // получаем id взятого элемента и класс прародителя
+    let idSign = localStorage.getItem("idSign20");
+
+    // берем id того элемента, на который положим несомый
+    let currentId = e.target.id;
+
+    // получаем объекты
+    let orignalElem = document.getElementById(idSign);
+    let currentElem = document.getElementById(currentId);
+
+    // меняем поля местами
+    currentElem.id = idSign;
+    currentElem.textContent = orignalElem.textContent;
+
+    orignalElem.textContent = "";
+    orignalElem.id = currentId;
+
+    if (orignalElem.parentElement.className === "bottomRow20") {
+        currentElem.style.backgroundColor = "#369cb7";
+        currentElem.style.color = "white";
+        currentElem.style.justifyContent = "center";
+        currentElem.style.cursor = "grab";
+        orignalElem.style.backgroundColor = "#c2e1e9";
+        orignalElem.style.border = "1px solid #c2e1e9";
+        orignalElem.style.cursor = "default";
+    } else {
+        currentElem.style.backgroundColor = "#369cb7";
+        currentElem.style.cursor = "grab";
+        orignalElem.style.backgroundColor = "#f4f4f4";
+        orignalElem.style.border = "1px solid #d0d0d0";
+        orignalElem.style.cursor = "default";
+    }
+}
+
 // ---------------------------------------------------------------------- SHOWING THE CORRECT ANSWER
 
 function addCorrectAnswer(
@@ -2170,13 +2213,19 @@ let numbers20 = {
 gettingDataFromFields(4, [3, 27, 3, 33], 20, numbers20);
 
 function question20() {
+    // проверяем на присутствие знака
+    let requiredElement = document.getElementsByClassName("forSign20")[0];
+    let selectedSign = requiredElement.textContent.trim();
+
     if (
         numbers20.firstNumber != "" &&
         numbers20.secondNumber != "" &&
         numbers20.thirdNumber != "" &&
-        numbers20.fourthNumber != ""
+        numbers20.fourthNumber != "" &&
+        selectedSign != ""
     ) {
         succerrorAndCreateMiniIcon(4, 20, numbers20);
+        succerror(requiredElement, selectedSign !== "<");
 
         // выносим общий статус к номеру вопроса
 
@@ -2184,7 +2233,8 @@ function question20() {
             numbers20.firstNumber === "right" &&
             numbers20.secondNumber === "right" &&
             numbers20.thirdNumber === "right" &&
-            numbers20.fourthNumber === "right"
+            numbers20.fourthNumber === "right" &&
+            selectedSign === "<"
         ) {
             addImage(
                 "success",
@@ -2204,6 +2254,10 @@ function question20() {
         }
     } else {
         highlightUnselectedBlocks(4, 20, numbers20);
+
+        if (selectedSign !== "<") {
+            requiredElement.style.border = "2px solid #FFB47D";
+        }
     }
 }
 

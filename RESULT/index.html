@@ -1985,16 +1985,47 @@
                             <div>
                                 ¢<input type="text" id="secondNumber20" />
                             </div>
-                            <div class="forSign20"></div>
+                            <div
+                                class="forSign20"
+                                id="selectInput11"
+                                ondragstart="drag20(event)"
+                                ondrop="drop20(event)"
+                                ondragover="allowDrop(event)"
+                                draggable="true"
+                            ></div>
                             <div>$<input type="text" id="thirdNumber20" /></div>
                             <div>
                                 ¢<input type="text" id="fourthNumber20" />
                             </div>
                         </div>
                         <div class="bottomRow20">
-                            <div><</div>
-                            <div>=</div>
-                            <div>></div>
+                            <div
+                                ondragstart="drag20(event)"
+                                ondrop="drop20(event)"
+                                ondragover="allowDrop(event)"
+                                draggable="true"
+                                id="smaller"
+                            >
+                                <
+                            </div>
+                            <div
+                                ondragstart="drag20(event)"
+                                ondrop="drop20(event)"
+                                ondragover="allowDrop(event)"
+                                draggable="true"
+                                id="equals"
+                            >
+                                =
+                            </div>
+                            <div
+                                ondragstart="drag20(event)"
+                                ondrop="drop20(event)"
+                                ondragover="allowDrop(event)"
+                                draggable="true"
+                                id="more"
+                            >
+                                >
+                            </div>
                         </div>
                     </div>
                 </div>
