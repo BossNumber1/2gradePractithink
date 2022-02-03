@@ -230,7 +230,7 @@ function addCorrectAnswerQuestion1() {
 }
 
 function addCorrectAnswerQuestion2() {
-    document.getElementsByClassName("app2")[0].style.height = "600px";
+    document.getElementsByClassName("app2")[0].style.height = "400px";
     addCorrectAnswer("correctAnswer2", "2que", "app2", "contentCorrectAnswer2");
 }
 
@@ -245,7 +245,7 @@ function addCorrectAnswerQuestion4() {
 }
 
 function addCorrectAnswerQuestion5() {
-    document.getElementsByClassName("app5")[0].style.height = "900px";
+    document.getElementsByClassName("app5")[0].style.height = "700px";
     addCorrectAnswer("correctAnswer5", "5que", "app5", "contentCorrectAnswer5");
 }
 
@@ -255,7 +255,7 @@ function addCorrectAnswerQuestion6() {
 }
 
 function addCorrectAnswerQuestion7() {
-    document.getElementsByClassName("app7")[0].style.height = "500px";
+    document.getElementsByClassName("app7")[0].style.height = "400px";
     addCorrectAnswer("correctAnswer7", "7que", "app7", "contentCorrectAnswer7");
 }
 
@@ -265,12 +265,12 @@ function addCorrectAnswerQuestion8() {
 }
 
 function addCorrectAnswerQuestion9() {
-    document.getElementsByClassName("app9")[0].style.height = "550px";
+    document.getElementsByClassName("app9")[0].style.height = "700px";
     addCorrectAnswer("correctAnswer9", "9que", "app9", "contentCorrectAnswer9");
 }
 
 function addCorrectAnswerQuestion10() {
-    document.getElementsByClassName("app10")[0].style.height = "800px";
+    document.getElementsByClassName("app10")[0].style.height = "600px";
     addCorrectAnswer(
         "correctAnswer10",
         "10que",
@@ -310,7 +310,7 @@ function addCorrectAnswerQuestion13() {
 }
 
 function addCorrectAnswerQuestion14() {
-    document.getElementsByClassName("app14")[0].style.height = "600px";
+    document.getElementsByClassName("app14")[0].style.height = "450px";
     addCorrectAnswer(
         "correctAnswer14",
         "14que",
@@ -376,6 +376,36 @@ function addCorrectAnswerQuestion20() {
         "20que",
         "app20",
         "contentCorrectAnswer20"
+    );
+}
+
+function addCorrectAnswerQuestion21() {
+    document.getElementsByClassName("app21")[0].style.height = "700px";
+    addCorrectAnswer(
+        "correctAnswer21",
+        "21que",
+        "app21",
+        "contentCorrectAnswer21"
+    );
+}
+
+function addCorrectAnswerQuestion22() {
+    document.getElementsByClassName("app22")[0].style.height = "900px";
+    addCorrectAnswer(
+        "correctAnswer22",
+        "22que",
+        "app22",
+        "contentCorrectAnswer22"
+    );
+}
+
+function addCorrectAnswerQuestion23() {
+    document.getElementsByClassName("app23")[0].style.height = "700px";
+    addCorrectAnswer(
+        "correctAnswer23",
+        "23que",
+        "app23",
+        "contentCorrectAnswer23"
     );
 }
 
@@ -491,7 +521,7 @@ function addMiniIcon(elem, status) {
     }
 
     if (elem.parentElement.parentElement.className === "content16") {
-        objDiv.style.marginTop = "-25px";
+        objDiv.style.marginTop = "-50px";
     }
 
     if (
@@ -504,8 +534,10 @@ function addMiniIcon(elem, status) {
         objDiv.style.marginTop = "-43px";
     }
 
-    if (elem.parentElement.parentElement.className === "content20") {
-        objDiv.style.marginTop = "-25px";
+    if (
+        elem.parentElement.parentElement.parentElement.className === "content20"
+    ) {
+        objDiv.style.marginTop = "-55px";
     }
 
     if (
@@ -1689,12 +1721,12 @@ let numbers13 = {
     sixthNumber: "",
 };
 
-// gettingDataFromFields(
-//     6,
-//     ["17/12", "8/7", "2", "2", "11/8", "11/8"],
-//     13,
-//     numbers13
-// );
+gettingDataFromFields(
+    6,
+    ["17/12", "8/7", "2", "2", "11/8", "11/8"],
+    13,
+    numbers13
+);
 
 function question13() {
     if (
@@ -1851,24 +1883,27 @@ let numbers16 = {
     firstNumber: "",
     secondNumber: "",
     thirdNumber: "",
+    fourthNumber: "",
 };
 
-// gettingDataFromFields(3, [6.6, 292, 122.7], 16, numbers16);
+gettingDataFromFields(4, ["12:10", "08:55", "05:50", "12:30"], 16, numbers16);
 
 function question16() {
     if (
         numbers16.firstNumber != "" &&
         numbers16.secondNumber != "" &&
-        numbers16.thirdNumber != ""
+        numbers16.thirdNumber != "" &&
+        numbers16.fourthNumber != ""
     ) {
-        succerrorAndCreateMiniIcon(3, 16, numbers16);
+        succerrorAndCreateMiniIcon(4, 16, numbers16);
 
         // выносим общий статус к номеру вопроса
 
         if (
             numbers16.firstNumber === "right" &&
             numbers16.secondNumber === "right" &&
-            numbers16.thirdNumber === "right"
+            numbers16.thirdNumber === "right" &&
+            numbers16.fourthNumber === "right"
         ) {
             addImage(
                 "success",
@@ -1887,7 +1922,7 @@ function question16() {
             // addCorrectAnswerQuestion16();
         }
     } else {
-        highlightUnselectedBlocks(3, 16, numbers16);
+        highlightUnselectedBlocks(4, 16, numbers16);
     }
 }
 
@@ -2017,24 +2052,27 @@ let numbers20 = {
     firstNumber: "",
     secondNumber: "",
     thirdNumber: "",
+    fourthNumber: "",
 };
 
-// gettingDataFromFields(3, [262, 7701, 115], 20, numbers20);
+gettingDataFromFields(4, [3, 27, 3, 33], 20, numbers20);
 
 function question20() {
     if (
         numbers20.firstNumber != "" &&
         numbers20.secondNumber != "" &&
-        numbers20.thirdNumber != ""
+        numbers20.thirdNumber != "" &&
+        numbers20.fourthNumber != ""
     ) {
-        succerrorAndCreateMiniIcon(3, 20, numbers20);
+        succerrorAndCreateMiniIcon(4, 20, numbers20);
 
         // выносим общий статус к номеру вопроса
 
         if (
             numbers20.firstNumber === "right" &&
             numbers20.secondNumber === "right" &&
-            numbers20.thirdNumber === "right"
+            numbers20.thirdNumber === "right" &&
+            numbers20.fourthNumber === "right"
         ) {
             addImage(
                 "success",
@@ -2053,7 +2091,74 @@ function question20() {
             // addCorrectAnswerQuestion20();
         }
     } else {
-        highlightUnselectedBlocks(3, 20, numbers20);
+        highlightUnselectedBlocks(4, 20, numbers20);
+    }
+}
+
+// 22 QUESTION
+
+let numbers22 = {
+    firstNumber: "",
+    secondNumber: "",
+    thirdNumber: "",
+    fourthNumber: "",
+};
+
+gettingDataFromFields(4, [7, 3, 4, 2], 22, numbers22);
+
+function question22() {
+    if (
+        numbers22.firstNumber != "" &&
+        numbers22.secondNumber != "" &&
+        numbers22.thirdNumber != "" &&
+        numbers22.fourthNumber != ""
+    ) {
+        succerror(
+            document.getElementById("firstNumber22"),
+            numbers22.firstNumber === "wrong"
+        );
+
+        succerror(
+            document.getElementById("secondNumber22"),
+            numbers22.secondNumber === "wrong"
+        );
+
+        succerror(
+            document.getElementById("thirdNumber22"),
+            numbers22.thirdNumber === "wrong"
+        );
+
+        succerror(
+            document.getElementById("fourthNumber22"),
+            numbers22.fourthNumber === "wrong"
+        );
+
+        // выносим общий статус к номеру вопроса
+
+        if (
+            numbers22.firstNumber === "right" &&
+            numbers22.secondNumber === "right" &&
+            numbers22.thirdNumber === "right" &&
+            numbers22.fourthNumber === "right"
+        ) {
+            addImage(
+                "success",
+                document.getElementsByClassName("question22"),
+                "app22",
+                22
+            );
+        } else {
+            addImage(
+                "failure",
+                document.getElementsByClassName("question22"),
+                "app22",
+                22
+            );
+
+            // addCorrectAnswerQuestion22();
+        }
+    } else {
+        highlightUnselectedBlocks(4, 22, numbers22);
     }
 }
 
@@ -2062,22 +2167,34 @@ function question20() {
 document.getElementById("submit").onclick = function () {
     // question1();
     question2();
+    addCorrectAnswerQuestion2();
     // question3();
     // question4();
     question5();
+    addCorrectAnswerQuestion5();
     // question6();
     question7();
+    addCorrectAnswerQuestion7();
     // question8();
     question9();
+    addCorrectAnswerQuestion9();
     question10();
+    addCorrectAnswerQuestion10();
     // question11();
     // question12();
-    // question13();
+    question13();
     question14();
+    addCorrectAnswerQuestion14();
     // question15();
-    // question16();
+    question16();
+    addCorrectAnswerQuestion16();
     // question17();
     // question18();
     // question19();
-    // question20();
+    question20();
+    addCorrectAnswerQuestion20();
+    // question21();
+    question22();
+    addCorrectAnswerQuestion22();
+    // question23();
 };
