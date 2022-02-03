@@ -2117,6 +2117,8 @@ function question18() {
             "2px solid #FFB47D";
         document.getElementById("secondBtn18").style.border =
             "2px solid #FFB47D";
+        document.getElementById("thirdBtn18").style.border =
+            "2px solid #FFB47D";
     }
 }
 
