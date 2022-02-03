@@ -39,12 +39,6 @@ document.getElementById("secondBtn1").onclick = function () {
     nameSelectedBtn1 = "secondBtn1";
 
     commonForSelectBtn("secondBtn1");
-    commonForNoselectedBtn([
-        "firstBtn1",
-        "thirdBtn1",
-        "fourthBtn1",
-        "fifthBtn1",
-    ]);
 };
 
 document.getElementById("thirdBtn1").onclick = function () {
@@ -52,12 +46,6 @@ document.getElementById("thirdBtn1").onclick = function () {
     nameSelectedBtn1 = "thirdBtn1";
 
     commonForSelectBtn("thirdBtn1");
-    commonForNoselectedBtn([
-        "firstBtn1",
-        "secondBtn1",
-        "fourthBtn1",
-        "fifthBtn1",
-    ]);
 };
 
 document.getElementById("fourthBtn1").onclick = function () {
@@ -65,12 +53,6 @@ document.getElementById("fourthBtn1").onclick = function () {
     nameSelectedBtn1 = "fourthBtn1";
 
     commonForSelectBtn("fourthBtn1");
-    commonForNoselectedBtn([
-        "firstBtn1",
-        "secondBtn1",
-        "thirdBtn1",
-        "fifthBtn1",
-    ]);
 };
 
 document.getElementById("fifthBtn1").onclick = function () {
@@ -78,12 +60,6 @@ document.getElementById("fifthBtn1").onclick = function () {
     nameSelectedBtn1 = "fifthBtn1";
 
     commonForSelectBtn("fifthBtn1");
-    commonForNoselectedBtn([
-        "firstBtn1",
-        "secondBtn1",
-        "fourthBtn1",
-        "thirdBtn1",
-    ]);
 };
 
 // 3 QUESTION
