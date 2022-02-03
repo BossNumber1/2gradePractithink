@@ -270,23 +270,18 @@ body {
     height: 50px;
 }
 
-.contentCorrectAnswer {
+.contentCorrectAnswer,
+.contentCorrectAnswer2,
+.contentCorrectAnswer7,
+.contentCorrectAnswer20 {
     top: 20px;
 }
 
-.contentCorrectAnswer22 {
-    top: 120px;
-}
-
-.contentCorrectAnswer1 {
-    top: 100px;
-}
-
-.contentCorrectAnswer2 {
-    top: 20px;
-}
-
-.contentCorrectAnswer6 {
+.contentCorrectAnswer5,
+.contentCorrectAnswer6,
+.contentCorrectAnswer9,
+.contentCorrectAnswer10,
+.contentCorrectAnswer12 {
     top: 40px;
 }
 
@@ -294,62 +289,31 @@ body {
     top: 50px;
 }
 
-.contentCorrectAnswer15 {
-    top: 140px;
-}
-
-.contentCorrectAnswer8 {
-    top: 140px;
-}
-
-.contentCorrectAnswer7 {
-    top: 20px;
-}
-
-.contentCorrectAnswer10 {
-    top: 40px;
-}
-
-.contentCorrectAnswer11,
-.contentCorrectAnswer13 {
-    top: 100px;
-}
-
-.contentCorrectAnswer14,
-.contentCorrectAnswer19 {
-    top: 120px;
-}
-
-.contentCorrectAnswer5 {
-    top: 40px;
-}
-
-.contentCorrectAnswer9 {
-    top: 40px;
-}
-
-.contentCorrectAnswer12 {
-    top: 40px;
-}
-
-.contentCorrectAnswer4 {
-    top: 100px;
-}
-
-.contentCorrectAnswer3 {
-    top: 160px;
-}
-
 .contentCorrectAnswer18 {
     top: 80px;
 }
 
+.contentCorrectAnswer1,
+.contentCorrectAnswer4,
+.contentCorrectAnswer11,
+.contentCorrectAnswer13,
 .contentCorrectAnswer16 {
     top: 100px;
 }
 
-.contentCorrectAnswer20 {
-    top: 20px;
+.contentCorrectAnswer14,
+.contentCorrectAnswer19,
+.contentCorrectAnswer22 {
+    top: 120px;
+}
+
+.contentCorrectAnswer8,
+.contentCorrectAnswer15 {
+    top: 140px;
+}
+
+.contentCorrectAnswer3 {
+    top: 160px;
 }
 
 .inputCorrectAnswer {
