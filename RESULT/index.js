@@ -1,9 +1,9 @@
 // ---------------------------------------------------------------------- button selection -------------------------------------------------------
 
 function commonForSelectBtn(idBtn) {
-    document.getElementById(idBtn).style.backgroundColor = "#bbedf4";
-    document.getElementById(idBtn).style.color = "#0e80a4";
-    document.getElementById(idBtn).style.border = "1px solid #BBEDF4";
+    document.getElementById(idBtn).style.backgroundColor = "#369CB7";
+    document.getElementById(idBtn).style.color = "white";
+    document.getElementById(idBtn).style.border = "1px solid #369CB7";
 }
 
 function commonForNoselectedBtn(arrayBtnsId) {
@@ -13,6 +13,78 @@ function commonForNoselectedBtn(arrayBtnsId) {
         document.getElementById(el).style.border = "1px solid black";
     });
 }
+
+// ------------------------------------------------------------ ALL SELECT BTNS -------------------------------------------------------------
+
+// 1 QUESTION
+
+let selectBtn1 = "",
+    nameSelectedBtn1 = "";
+
+document.getElementById("firstBtn1").onclick = function () {
+    selectBtn1 = "right";
+    nameSelectedBtn1 = "firstBtn1";
+
+    commonForSelectBtn("firstBtn1");
+    commonForNoselectedBtn([
+        "secondBtn1",
+        "thirdBtn1",
+        "fourthBtn1",
+        "fifthBtn1",
+    ]);
+};
+
+document.getElementById("secondBtn1").onclick = function () {
+    selectBtn1 = "wrong";
+    nameSelectedBtn1 = "secondBtn1";
+
+    commonForSelectBtn("secondBtn1");
+    commonForNoselectedBtn([
+        "firstBtn1",
+        "thirdBtn1",
+        "fourthBtn1",
+        "fifthBtn1",
+    ]);
+};
+
+document.getElementById("thirdBtn1").onclick = function () {
+    selectBtn1 = "wrong";
+    nameSelectedBtn1 = "thirdBtn1";
+
+    commonForSelectBtn("thirdBtn1");
+    commonForNoselectedBtn([
+        "firstBtn1",
+        "secondBtn1",
+        "fourthBtn1",
+        "fifthBtn1",
+    ]);
+};
+
+document.getElementById("fourthBtn1").onclick = function () {
+    selectBtn1 = "wrong";
+    nameSelectedBtn1 = "fourthBtn1";
+
+    commonForSelectBtn("fourthBtn1");
+    commonForNoselectedBtn([
+        "firstBtn1",
+        "secondBtn1",
+        "thirdBtn1",
+        "fifthBtn1",
+    ]);
+};
+
+document.getElementById("fifthBtn1").onclick = function () {
+    selectBtn1 = "wrong";
+    nameSelectedBtn1 = "fifthBtn1";
+
+    commonForSelectBtn("fifthBtn1");
+    commonForNoselectedBtn([
+        "firstBtn1",
+        "secondBtn1",
+        "fourthBtn1",
+        "thirdBtn1",
+    ]);
+};
 
 // ------------------------------------------------------------ ALL DRAG AND DROP -------------------------------------------------------------
 
