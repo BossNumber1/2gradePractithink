@@ -821,7 +821,7 @@ let selectBtn18 = "",
     nameSelectedBtn18 = "";
 
 document.getElementById("firstBtn18").onclick = function () {
-    selectBtn18 = "right";
+    selectBtn18 = "wrong";
     nameSelectedBtn18 = "firstBtn18";
 
     commonForSelectBtn("firstBtn18");
@@ -837,7 +837,7 @@ document.getElementById("secondBtn18").onclick = function () {
 };
 
 document.getElementById("thirdBtn18").onclick = function () {
-    selectBtn18 = "wrong";
+    selectBtn18 = "right";
     nameSelectedBtn18 = "thirdBtn18";
 
     commonForSelectBtn("thirdBtn18");
@@ -1962,32 +1962,16 @@ function question17() {
 
 // 18 QUESTION
 
-let numbers18 = {
-    firstNumber: "",
-    secondNumber: "",
-    thirdNumber: "",
-    fourthNumber: "",
-};
-
-// gettingDataFromFields(4, [7, 6, 3, 7], 18, numbers18);
-
 function question18() {
-    if (
-        numbers18.firstNumber != "" &&
-        numbers18.secondNumber != "" &&
-        numbers18.thirdNumber != "" &&
-        numbers18.fourthNumber != ""
-    ) {
-        succerrorAndCreateMiniIcon(4, 18, numbers18);
+    if (selectBtn18 !== "") {
+        succerror(
+            document.getElementById(nameSelectedBtn18),
+            selectBtn18 === "wrong"
+        );
 
         // выносим общий статус к номеру вопроса
 
-        if (
-            numbers18.firstNumber === "right" &&
-            numbers18.secondNumber === "right" &&
-            numbers18.thirdNumber === "right" &&
-            numbers18.fourthNumber === "right"
-        ) {
+        if (selectBtn18 === "right") {
             addImage(
                 "success",
                 document.getElementsByClassName("question18"),
@@ -2005,7 +1989,10 @@ function question18() {
             // addCorrectAnswerQuestion18();
         }
     } else {
-        highlightUnselectedBlocks(4, 18, numbers18);
+        document.getElementById("firstBtn18").style.border =
+            "2px solid #FFB47D";
+        document.getElementById("secondBtn18").style.border =
+            "2px solid #FFB47D";
     }
 }
 
@@ -2197,7 +2184,7 @@ document.getElementById("submit").onclick = function () {
     addCorrectAnswerQuestion16();
     // question17();
     addCorrectAnswerQuestion17();
-    // question18();
+    question18();
     addCorrectAnswerQuestion18();
     // question19();
     addCorrectAnswerQuestion19();
