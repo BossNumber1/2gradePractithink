@@ -2167,19 +2167,67 @@ function question18() {
 
 // 19 QUESTION
 
-let numbers19 = {
-    firstNumber: "",
+let selectBtn19 = "right",
+    btnSelectedName19;
+
+document.getElementById("firstCollection19").onclick = function () {
+    document
+        .getElementById("firstCollection19")
+        .classList.toggle("selectedPicture19");
+    document
+        .getElementById("secondCollection19")
+        .classList.remove("selectedPicture19");
+    document
+        .getElementById("thirdCollection19")
+        .classList.remove("selectedPicture19");
+
+    selectBtn19 = "wrong";
+    btnSelectedName19 = "firstCollection19";
 };
 
-// gettingDataFromFields(1, [42.1], 19, numbers19);
+document.getElementById("secondCollection19").onclick = function () {
+    document
+        .getElementById("secondCollection19")
+        .classList.toggle("selectedPicture19");
+    document
+        .getElementById("firstCollection19")
+        .classList.remove("selectedPicture19");
+    document
+        .getElementById("thirdCollection19")
+        .classList.remove("selectedPicture19");
+
+    selectBtn19 = "wrong";
+    btnSelectedName19 = "secondCollection19";
+};
+
+document.getElementById("thirdCollection19").onclick = function () {
+    document
+        .getElementById("thirdCollection19")
+        .classList.toggle("selectedPicture19");
+    document
+        .getElementById("firstCollection19")
+        .classList.remove("selectedPicture19");
+    document
+        .getElementById("secondCollection19")
+        .classList.remove("selectedPicture19");
+
+    selectBtn19 = "right";
+    btnSelectedName19 = "thirdCollection19";
+};
 
 function question19() {
-    if (numbers19.firstNumber != "") {
-        succerrorAndCreateMiniIcon(1, 19, numbers19);
+    if (btnSelectedName19) {
+        if (selectBtn19 === "right") {
+            document
+                .getElementById(btnSelectedName19)
+                .classList.toggle("success19");
+        } else {
+            document
+                .getElementById(btnSelectedName19)
+                .classList.toggle("error19");
+        }
 
-        // выносим общий статус к номеру вопроса
-
-        if (numbers19.firstNumber === "right") {
+        if (selectBtn19 === "right") {
             addImage(
                 "success",
                 document.getElementsByClassName("question19"),
@@ -2197,7 +2245,12 @@ function question19() {
             // addCorrectAnswerQuestion19();
         }
     } else {
-        highlightUnselectedBlocks(1, 19, numbers19);
+        document
+            .getElementById("thirdCollection19")
+            .classList.remove("selectedPicture19");
+
+        document.getElementsByClassName("content19")[0].style.border =
+            "1px solid #FFB47D";
     }
 }
 
@@ -2366,7 +2419,7 @@ document.getElementById("submit").onclick = function () {
     addCorrectAnswerQuestion17();
     question18();
     addCorrectAnswerQuestion18();
-    // question19();
+    question19();
     addCorrectAnswerQuestion19();
     question20();
     addCorrectAnswerQuestion20();
