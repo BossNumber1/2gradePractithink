@@ -1852,18 +1852,25 @@ let numbers13 = {
     sixthNumber: "",
 };
 
-gettingDataFromFields(6, [5, "", 2, "1/2", 3, ""], 13, numbers13);
+gettingDataFromFields(6, [5, 0, 2, "1/2", 3, 0], 13, numbers13);
 
 function question13() {
     if (
         numbers13.firstNumber !== "" &&
+        numbers13.secondNumber !== "" &&
         numbers13.thirdNumber !== "" &&
         numbers13.fourthNumber !== "" &&
-        numbers13.fifthNumber !== ""
+        numbers13.fifthNumber !== "" &&
+        numbers13.sixthNumber !== ""
     ) {
         succerror(
             document.getElementById("firstNumber13"),
             numbers13.firstNumber === "wrong"
+        );
+
+        succerror(
+            document.getElementById("secondNumber13"),
+            numbers13.secondNumber === "wrong"
         );
 
         succerror(
@@ -1881,13 +1888,20 @@ function question13() {
             numbers13.thirdNumber === "wrong"
         );
 
+        succerror(
+            document.getElementById("sixthNumber13"),
+            numbers13.secondNumber === "wrong"
+        );
+
         // выносим общий статус к номеру вопроса
 
         if (
             numbers13.firstNumber === "right" &&
+            numbers13.secondNumber === "right" &&
             numbers13.thirdNumber === "right" &&
             numbers13.fourthNumber === "right" &&
-            numbers13.fifthNumber === "right"
+            numbers13.fifthNumber === "right" &&
+            numbers13.sixthNumber === "right"
         ) {
             addImage(
                 "success",
