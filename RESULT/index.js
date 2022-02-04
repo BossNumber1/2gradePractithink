@@ -1014,17 +1014,17 @@ function drop11(e) {
 // 12 QUESTION
 
 function drag12(e) {
-    localStorage.setItem("idOrigin12question5class", e.target.id);
+    localStorage.setItem("idOrigin11question2class", e.target.id);
     localStorage.setItem(
-        "textContent12question5class",
+        "textContent11question2class",
         e.target.textContent.trim()
     );
 }
 
 function drop12(e) {
     // получаем текст и id взятого элемента
-    let idOrig = localStorage.getItem("idOrigin12question5class");
-    let textContent = localStorage.getItem("textContent12question5class");
+    let idOrig = localStorage.getItem("idOrigin11question2class");
+    let textContent = localStorage.getItem("textContent11question2class");
 
     // получаем id, на который кладём элемент
     let currentId = e.target.id;
