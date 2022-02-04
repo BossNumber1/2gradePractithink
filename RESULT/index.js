@@ -968,6 +968,49 @@ function drop9(e) {
     e.target.parentElement.style.cursor = "grab";
 }
 
+// 11 QUESTION
+
+function drag11(e) {
+    localStorage.setItem("idOrigin11question2class", e.target.id);
+    localStorage.setItem(
+        "textContent11question2class",
+        e.target.textContent.trim()
+    );
+}
+
+function drop11(e) {
+    // получаем текст и id взятого элемента
+    let idOrig = localStorage.getItem("idOrigin11question2class");
+    let textContent = localStorage.getItem("textContent11question2class");
+
+    // получаем id, на который кладём элемент
+    let currentId = e.target.id;
+
+    // получаем объекты
+    let orignalElement = document.getElementById(idOrig);
+    let currentElement = document.getElementById(currentId);
+
+    // меняем блоки местами
+    currentElement.textContent = textContent;
+    currentElement.style.backgroundColor = "#369cb7";
+    currentElement.style.border = "1px solid #369cb7";
+    currentElement.style.color = "white";
+    currentElement.style.cursor = "grab";
+
+    currentElement.style.display = "flex";
+    currentElement.style.alignItems = "center";
+    currentElement.style.justifyContent = "center";
+
+    orignalElement.style.backgroundColor = "white";
+    orignalElement.style.border = "1px solid black";
+    orignalElement.textContent = "";
+    orignalElement.style.cursor = "default";
+
+    // меняем id местами
+    currentElement.id = idOrig;
+    orignalElement.id = currentId;
+}
+
 // 12 QUESTION
 
 function drag12(e) {
