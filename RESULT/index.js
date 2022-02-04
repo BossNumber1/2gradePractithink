@@ -89,7 +89,11 @@ function addMiniIcon(elem, status) {
         objDiv.style.marginTop = "-25px";
     }
 
-    if (
+    if (elem.parentElement.parentElement.className === "fourthRow11") {
+        objDiv.style.marginTop = "-20px";
+        objDiv.style.marginLeft =
+            elem.offsetLeft + widthAdjacentElement / 2 - 7 + "px";
+    } else if (
         elem.parentElement.parentElement.parentElement.className === "content11"
     ) {
         objDiv.style.marginTop = "-25px";
@@ -1732,6 +1736,12 @@ function question10() {
 
 // 11 QUESTION
 
+let numbers11 = {
+    firstNumber: "",
+};
+
+gettingDataFromFields(1, [5], 11, numbers11);
+
 function question11() {
     // получаем содежимое блоков
     let firstPlace11 =
@@ -1748,6 +1758,7 @@ function question11() {
         document.getElementsByClassName("firstRow11")[0].children[5].id;
 
     if (
+        numbers11.firstNumber !== "" &&
         firstPlace11 !== "firstEmpty11" &&
         secondPlace11 !== "secondEmpty11" &&
         thirdPlace11 !== "thirdEmpty11" &&
@@ -1755,8 +1766,10 @@ function question11() {
         fifthPlace11 !== "fifthEmpty11" &&
         sixthPlace11 !== "sixthEmpty11"
     ) {
+        succerrorAndCreateMiniIcon(1, 11, numbers11);
         // проверяем на верность для создания статуса
         if (
+            numbers11.firstNumber === "right" &&
             firstPlace11 === "sixthBtn11" &&
             secondPlace11 === "secondBtn11" &&
             thirdPlace11 === "thirdBtn11" &&
@@ -1853,7 +1866,18 @@ function question11() {
             // addCorrectAnswerQuestion11();
         }
     } else {
-        highlightingUnfillededBlocks(6, 11);
+        if (
+            firstPlace11 === "firstEmpty11" &&
+            secondPlace11 === "secondEmpty11" &&
+            thirdPlace11 === "thirdEmpty11" &&
+            fourthPlace11 === "fourthEmpty11" &&
+            fifthPlace11 === "fifthEmpty11" &&
+            sixthPlace11 === "sixthEmpty11"
+        ) {
+            highlightingUnfillededBlocks(6, 11);
+        }
+
+        highlightUnselectedBlocks(1, 11, numbers11);
     }
 }
 
