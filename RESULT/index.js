@@ -1795,26 +1795,34 @@ function question11() {
 function question12() {
     // получаем содежимое блоков
     let firstPlace12 =
-        document.getElementsByClassName("places12")[0].children[0].id;
+        document.getElementsByClassName("firstRow12")[0].children[0].id;
     let secondPlace12 =
-        document.getElementsByClassName("places12")[0].children[1].id;
+        document.getElementsByClassName("firstRow12")[0].children[1].id;
     let thirdPlace12 =
-        document.getElementsByClassName("places12")[0].children[2].id;
+        document.getElementsByClassName("firstRow12")[0].children[2].id;
     let fourthPlace12 =
-        document.getElementsByClassName("places12")[0].children[3].id;
+        document.getElementsByClassName("firstRow12")[0].children[3].id;
+    let fifthPlace12 =
+        document.getElementsByClassName("firstRow12")[0].children[4].id;
+    let sixthPlace12 =
+        document.getElementsByClassName("firstRow12")[0].children[5].id;
 
     if (
         firstPlace12 !== "firstEmpty12" &&
         secondPlace12 !== "secondEmpty12" &&
         thirdPlace12 !== "thirdEmpty12" &&
-        fourthPlace12 !== "fourthEmpty12"
+        fourthPlace12 !== "fourthEmpty12" &&
+        fifthPlace12 !== "fifthEmpty12" &&
+        sixthPlace12 !== "sixthEmpty12"
     ) {
         // проверяем на верность для создания статуса
         if (
-            firstPlace12 === "secondBtn12" &&
+            firstPlace12 === "firstBtn12" &&
             secondPlace12 === "fourthBtn12" &&
-            thirdPlace12 === "firstBtn12" &&
-            fourthPlace12 === "thirdBtn12"
+            thirdPlace12 === "sixthBtn12" &&
+            fourthPlace12 === "secondBtn12" &&
+            fifthPlace12 === "fifthBtn12" &&
+            sixthPlace12 === "thirdBtn12"
         ) {
             addImage(
                 "success",
@@ -1823,12 +1831,12 @@ function question12() {
                 12
             );
         } else {
-            if (firstPlace12 !== "secondBtn12") {
+            if (firstPlace12 !== "firstBtn12") {
                 document.getElementById(firstPlace12).style.border =
                     "2px solid #ED7777";
 
                 addMiniIcon(document.getElementById(firstPlace12), "failure");
-            } else if (firstPlace12 === "secondBtn12") {
+            } else if (firstPlace12 === "firstBtn12") {
                 document.getElementById(firstPlace12).style.border =
                     "2px solid #9DD765";
 
@@ -1847,28 +1855,52 @@ function question12() {
                 addMiniIcon(document.getElementById(secondPlace12), "success");
             }
 
-            if (thirdPlace12 !== "firstBtn12") {
+            if (thirdPlace12 !== "sixthBtn12") {
                 document.getElementById(thirdPlace12).style.border =
                     "2px solid #ED7777";
 
                 addMiniIcon(document.getElementById(thirdPlace12), "failure");
-            } else if (thirdPlace12 === "firstBtn12") {
+            } else if (thirdPlace12 === "sixthBtn12") {
                 document.getElementById(thirdPlace12).style.border =
                     "2px solid #9DD765";
 
                 addMiniIcon(document.getElementById(thirdPlace12), "success");
             }
 
-            if (fourthPlace12 !== "thirdBtn12") {
+            if (fourthPlace12 !== "secondBtn12") {
                 document.getElementById(fourthPlace12).style.border =
                     "2px solid #ED7777";
 
                 addMiniIcon(document.getElementById(fourthPlace12), "failure");
-            } else if (fourthPlace12 === "thirdBtn12") {
+            } else if (fourthPlace12 === "secondBtn12") {
                 document.getElementById(fourthPlace12).style.border =
                     "2px solid #9DD765";
 
                 addMiniIcon(document.getElementById(fourthPlace12), "success");
+            }
+
+            if (fifthPlace12 !== "fifthBtn12") {
+                document.getElementById(fifthPlace12).style.border =
+                    "2px solid #ED7777";
+
+                addMiniIcon(document.getElementById(fifthPlace12), "failure");
+            } else if (fifthPlace12 === "fifthBtn12") {
+                document.getElementById(fifthPlace12).style.border =
+                    "2px solid #9DD765";
+
+                addMiniIcon(document.getElementById(fifthPlace12), "success");
+            }
+
+            if (sixthPlace12 !== "thirdBtn12") {
+                document.getElementById(sixthPlace12).style.border =
+                    "2px solid #ED7777";
+
+                addMiniIcon(document.getElementById(sixthPlace12), "failure");
+            } else if (sixthPlace12 === "thirdBtn12") {
+                document.getElementById(sixthPlace12).style.border =
+                    "2px solid #9DD765";
+
+                addMiniIcon(document.getElementById(sixthPlace12), "success");
             }
 
             addImage(
@@ -1881,7 +1913,7 @@ function question12() {
             // addCorrectAnswerQuestion12();
         }
     } else {
-        highlightingUnfillededBlocks(4, 12);
+        highlightingUnfillededBlocks(6, 12);
     }
 }
 
@@ -2532,7 +2564,7 @@ document.getElementById("submit").onclick = function () {
     addCorrectAnswerQuestion10();
     // question11();
     addCorrectAnswerQuestion11();
-    // question12();
+    question12();
     addCorrectAnswerQuestion12();
     question13();
     question14();
