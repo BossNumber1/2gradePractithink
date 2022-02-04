@@ -566,90 +566,6 @@ document.getElementById("fifthBtn1").onclick = function () {
     selectedButton1.fifthBtn1 = "right";
 };
 
-function question1() {
-    let selectedButtons = [],
-        namesSelectedButtons = [],
-        isTheArrayEmpty = 0;
-
-    for (let key in selectedButton1) {
-        if (selectedButton1[key] !== "") {
-            selectedButtons.push(selectedButton1[key]);
-            namesSelectedButtons.push(key);
-            isTheArrayEmpty++;
-        }
-    }
-
-    if (isTheArrayEmpty > 0) {
-        namesSelectedButtons.map((el, index) => {
-            succerror(
-                document.getElementById(el),
-                selectedButtons[index] === "wrong"
-            );
-        });
-
-        // выносим общий статус к номеру вопроса
-
-        if (
-            selectedButton1.firstBtn1 !== "" &&
-            selectedButton1.secondBtn1 !== "" &&
-            selectedButton1.thirdBtn1 !== "" &&
-            selectedButton1.fourthBtn1 !== "" &&
-            selectedButton1.fifthBtn1 !== ""
-        ) {
-            addImage(
-                "success",
-                document.getElementsByClassName("question1"),
-                "app1",
-                1
-            );
-        } else {
-            // подсветим невыбранные блоки
-            if (selectedButton1.firstBtn1 === "") {
-                document.getElementById("firstBtn1").style.border =
-                    "2px solid #FFB47D";
-            }
-
-            if (selectedButton1.secondBtn1 === "") {
-                document.getElementById("secondBtn1").style.border =
-                    "2px solid #FFB47D";
-            }
-
-            if (selectedButton1.thirdBtn1 === "") {
-                document.getElementById("thirdBtn1").style.border =
-                    "2px solid #FFB47D";
-            }
-
-            if (selectedButton1.fourthBtn1 === "") {
-                document.getElementById("fourthBtn1").style.border =
-                    "2px solid #FFB47D";
-            }
-
-            if (selectedButton1.fifthBtn1 === "") {
-                document.getElementById("fifthBtn1").style.border =
-                    "2px solid #FFB47D";
-            }
-
-            // придадим статуса
-            addImage(
-                "failure",
-                document.getElementsByClassName("question1"),
-                "app1",
-                1
-            );
-
-            // addCorrectAnswerQuestion1();
-        }
-    } else {
-        document.getElementById("firstBtn1").style.border = "2px solid #FFB47D";
-        document.getElementById("secondBtn1").style.border =
-            "2px solid #FFB47D";
-        document.getElementById("thirdBtn1").style.border = "2px solid #FFB47D";
-        document.getElementById("fourthBtn1").style.border =
-            "2px solid #FFB47D";
-        document.getElementById("fifthBtn1").style.border = "2px solid #FFB47D";
-    }
-}
-
 // 3 QUESTION
 
 let selectBtn3 = "",
@@ -739,61 +655,6 @@ document.getElementById("fifthBtn8").onclick = function () {
 
     selectedButton8.fifthBtn8 = "wrong";
 };
-
-function question8() {
-    let selectedButtons = [],
-        namesSelectedButtons = [],
-        isTheArrayEmpty = 0;
-
-    for (let key in selectedButton8) {
-        if (selectedButton8[key] !== "") {
-            selectedButtons.push(selectedButton8[key]);
-            namesSelectedButtons.push(key);
-            isTheArrayEmpty++;
-        }
-    }
-
-    if (isTheArrayEmpty > 0) {
-        namesSelectedButtons.map((el, index) => {
-            succerror(
-                document.getElementById(el),
-                selectedButtons[index] === "wrong"
-            );
-        });
-
-        // выносим общий статус к номеру вопроса
-
-        if (
-            selectedButton8.secondBtn8 === "right" &&
-            selectedButton8.fourthBtn8 === "right"
-        ) {
-            addImage(
-                "success",
-                document.getElementsByClassName("question8"),
-                "app8",
-                8
-            );
-        } else {
-            // придадим статуса
-            addImage(
-                "failure",
-                document.getElementsByClassName("question8"),
-                "app8",
-                8
-            );
-
-            // addCorrectAnswerQuestion8();
-        }
-    } else {
-        document.getElementById("firstBtn8").style.border = "2px solid #FFB47D";
-        document.getElementById("secondBtn8").style.border =
-            "2px solid #FFB47D";
-        document.getElementById("thirdBtn8").style.border = "2px solid #FFB47D";
-        document.getElementById("fourthBtn8").style.border =
-            "2px solid #FFB47D";
-        document.getElementById("fifthBtn8").style.border = "2px solid #FFB47D";
-    }
-}
 
 // 15 QUESTION
 
@@ -1284,7 +1145,7 @@ function addCorrectAnswerQuestion12() {
 }
 
 function addCorrectAnswerQuestion13() {
-    document.getElementsByClassName("app13")[0].style.height = "750px";
+    document.getElementsByClassName("app13")[0].style.height = "950px";
     addCorrectAnswer(
         "correctAnswer13",
         "13que",
@@ -1395,6 +1256,92 @@ function addCorrectAnswerQuestion23() {
 
 // --------------------------------------------------------------------- validation of input fields ----------------------------------------------
 
+// 1 QUESTION
+
+function question1() {
+    let selectedButtons = [],
+        namesSelectedButtons = [],
+        isTheArrayEmpty = 0;
+
+    for (let key in selectedButton1) {
+        if (selectedButton1[key] !== "") {
+            selectedButtons.push(selectedButton1[key]);
+            namesSelectedButtons.push(key);
+            isTheArrayEmpty++;
+        }
+    }
+
+    if (isTheArrayEmpty > 0) {
+        namesSelectedButtons.map((el, index) => {
+            succerror(
+                document.getElementById(el),
+                selectedButtons[index] === "wrong"
+            );
+        });
+
+        // выносим общий статус к номеру вопроса
+
+        if (
+            selectedButton1.firstBtn1 !== "" &&
+            selectedButton1.secondBtn1 !== "" &&
+            selectedButton1.thirdBtn1 !== "" &&
+            selectedButton1.fourthBtn1 !== "" &&
+            selectedButton1.fifthBtn1 !== ""
+        ) {
+            addImage(
+                "success",
+                document.getElementsByClassName("question1"),
+                "app1",
+                1
+            );
+        } else {
+            // подсветим невыбранные блоки
+            if (selectedButton1.firstBtn1 === "") {
+                document.getElementById("firstBtn1").style.border =
+                    "2px solid #FFB47D";
+            }
+
+            if (selectedButton1.secondBtn1 === "") {
+                document.getElementById("secondBtn1").style.border =
+                    "2px solid #FFB47D";
+            }
+
+            if (selectedButton1.thirdBtn1 === "") {
+                document.getElementById("thirdBtn1").style.border =
+                    "2px solid #FFB47D";
+            }
+
+            if (selectedButton1.fourthBtn1 === "") {
+                document.getElementById("fourthBtn1").style.border =
+                    "2px solid #FFB47D";
+            }
+
+            if (selectedButton1.fifthBtn1 === "") {
+                document.getElementById("fifthBtn1").style.border =
+                    "2px solid #FFB47D";
+            }
+
+            // придадим статуса
+            addImage(
+                "failure",
+                document.getElementsByClassName("question1"),
+                "app1",
+                1
+            );
+
+            addCorrectAnswerQuestion1();
+        }
+    } else {
+        document.getElementById("firstBtn1").style.border = "2px solid #FFB47D";
+        document.getElementById("secondBtn1").style.border =
+            "2px solid #FFB47D";
+        document.getElementById("thirdBtn1").style.border = "2px solid #FFB47D";
+        document.getElementById("fourthBtn1").style.border =
+            "2px solid #FFB47D";
+        document.getElementById("fifthBtn1").style.border = "2px solid #FFB47D";
+    }
+}
+
 // 2 QUESTION
 
 let numbers2 = {
@@ -1434,7 +1381,7 @@ function question2() {
                 2
             );
 
-            // addCorrectAnswerQuestion2();
+            addCorrectAnswerQuestion2();
         }
     } else {
         highlightUnselectedBlocks(3, 2, numbers2);
@@ -1467,7 +1414,7 @@ function question3() {
                 3
             );
 
-            // addCorrectAnswerQuestion3();
+            addCorrectAnswerQuestion3();
         }
     } else {
         document.getElementById("firstBtn3").style.border = "2px solid #FFB47D";
@@ -1536,7 +1483,7 @@ function question4() {
                 4
             );
 
-            // addCorrectAnswerQuestion4();
+            addCorrectAnswerQuestion4();
         }
     } else {
         if (selectBtn4 === "") {
@@ -1598,7 +1545,7 @@ function question5() {
                 5
             );
 
-            // addCorrectAnswerQuestion5();
+            addCorrectAnswerQuestion5();
         }
     } else {
         highlightUnselectedBlocks(6, 5, numbers5);
@@ -1710,7 +1657,7 @@ function question6() {
                 6
             );
 
-            // addCorrectAnswerQuestion6();
+            addCorrectAnswerQuestion6();
         }
     } else {
         document.getElementById("firstBtn6").classList.remove("selectedCircle");
@@ -1758,10 +1705,67 @@ function question7() {
                 7
             );
 
-            // addCorrectAnswerQuestion7();
+            addCorrectAnswerQuestion7();
         }
     } else {
         highlightUnselectedBlocks(3, 7, numbers7);
+    }
+}
+
+// 8 QUESTION
+
+function question8() {
+    let selectedButtons = [],
+        namesSelectedButtons = [],
+        isTheArrayEmpty = 0;
+
+    for (let key in selectedButton8) {
+        if (selectedButton8[key] !== "") {
+            selectedButtons.push(selectedButton8[key]);
+            namesSelectedButtons.push(key);
+            isTheArrayEmpty++;
+        }
+    }
+
+    if (isTheArrayEmpty > 0) {
+        namesSelectedButtons.map((el, index) => {
+            succerror(
+                document.getElementById(el),
+                selectedButtons[index] === "wrong"
+            );
+        });
+
+        // выносим общий статус к номеру вопроса
+
+        if (
+            selectedButton8.secondBtn8 === "right" &&
+            selectedButton8.fourthBtn8 === "right"
+        ) {
+            addImage(
+                "success",
+                document.getElementsByClassName("question8"),
+                "app8",
+                8
+            );
+        } else {
+            // придадим статуса
+            addImage(
+                "failure",
+                document.getElementsByClassName("question8"),
+                "app8",
+                8
+            );
+
+            addCorrectAnswerQuestion8();
+        }
+    } else {
+        document.getElementById("firstBtn8").style.border = "2px solid #FFB47D";
+        document.getElementById("secondBtn8").style.border =
+            "2px solid #FFB47D";
+        document.getElementById("thirdBtn8").style.border = "2px solid #FFB47D";
+        document.getElementById("fourthBtn8").style.border =
+            "2px solid #FFB47D";
+        document.getElementById("fifthBtn8").style.border = "2px solid #FFB47D";
     }
 }
 
@@ -1804,7 +1808,7 @@ function question9() {
                 9
             );
 
-            // addCorrectAnswerQuestion9();
+            addCorrectAnswerQuestion9();
         }
     } else {
         highlightUnselectedBlocks(3, 9, numbers9);
@@ -1840,7 +1844,7 @@ function question10() {
                 10
             );
 
-            // addCorrectAnswerQuestion10();
+            addCorrectAnswerQuestion10();
         }
     } else {
         highlightUnselectedBlocks(1, 10, numbers10);
@@ -1976,7 +1980,7 @@ function question11() {
                 11
             );
 
-            // addCorrectAnswerQuestion11();
+            addCorrectAnswerQuestion11();
         }
     } else {
         if (
@@ -2124,7 +2128,7 @@ function question12() {
                 12
             );
 
-            // addCorrectAnswerQuestion12();
+            addCorrectAnswerQuestion12();
         }
     } else {
         if (
@@ -2289,7 +2293,7 @@ function question13() {
                 13
             );
 
-            // addCorrectAnswerQuestion13();
+            addCorrectAnswerQuestion13();
         }
     } else {
         highlightUnselectedBlocks(6, 13, numbers13);
@@ -2329,7 +2333,7 @@ function question14() {
                 14
             );
 
-            // addCorrectAnswerQuestion14();
+            addCorrectAnswerQuestion14();
         }
     } else {
         highlightUnselectedBlocks(2, 14, numbers14);
@@ -2362,7 +2366,7 @@ function question15() {
                 15
             );
 
-            // addCorrectAnswerQuestion15();
+            addCorrectAnswerQuestion15();
         }
     } else {
         document.getElementById("firstBtn15").style.border =
@@ -2414,7 +2418,7 @@ function question16() {
                 16
             );
 
-            // addCorrectAnswerQuestion16();
+            addCorrectAnswerQuestion16();
         }
     } else {
         highlightUnselectedBlocks(4, 16, numbers16);
@@ -2498,7 +2502,7 @@ function question17() {
                 17
             );
 
-            // addCorrectAnswerQuestion17();
+            addCorrectAnswerQuestion17();
         }
     } else {
         document
@@ -2536,7 +2540,7 @@ function question18() {
                 18
             );
 
-            // addCorrectAnswerQuestion18();
+            addCorrectAnswerQuestion18();
         }
     } else {
         document.getElementById("firstBtn18").style.border =
@@ -2625,7 +2629,7 @@ function question19() {
                 19
             );
 
-            // addCorrectAnswerQuestion19();
+            addCorrectAnswerQuestion19();
         }
     } else {
         document
@@ -2686,7 +2690,7 @@ function question20() {
                 20
             );
 
-            // addCorrectAnswerQuestion20();
+            addCorrectAnswerQuestion20();
         }
     } else {
         highlightUnselectedBlocks(4, 20, numbers20);
@@ -2743,6 +2747,32 @@ function drop21(e) {
         crnt.style.opacity = 1;
 
         orgnElement.remove();
+    }
+}
+
+function question21() {
+    let basket = document.getElementById("basket21");
+
+    if (basket.children.length !== 2) {
+        if (basket.children.length === 8) {
+            addImage(
+                "success",
+                document.getElementsByClassName("question21"),
+                "app21",
+                21
+            );
+        } else {
+            addImage(
+                "failure",
+                document.getElementsByClassName("question21"),
+                "app21",
+                21
+            );
+
+            addCorrectAnswerQuestion21();
+        }
+    } else {
+        basket.style.border = "2px solid #FFB47D";
     }
 }
 
@@ -2806,7 +2836,7 @@ function question22() {
                 22
             );
 
-            // addCorrectAnswerQuestion22();
+            addCorrectAnswerQuestion22();
         }
     } else {
         highlightUnselectedBlocks(4, 22, numbers22);
@@ -2867,6 +2897,8 @@ function question23() {
                 "app23",
                 23
             );
+
+            addCorrectAnswerQuestion23();
         }
     } else {
         if (nameChild1 === "emptyPlace") {
@@ -2891,48 +2923,26 @@ function question23() {
 
 document.getElementById("submit").onclick = function () {
     question1();
-    addCorrectAnswerQuestion1();
     question2();
-    addCorrectAnswerQuestion2();
     question3();
-    addCorrectAnswerQuestion3();
     question4();
-    addCorrectAnswerQuestion4();
     question5();
-    addCorrectAnswerQuestion5();
     question6();
-    addCorrectAnswerQuestion6();
     question7();
-    addCorrectAnswerQuestion7();
     question8();
-    addCorrectAnswerQuestion8();
     question9();
-    addCorrectAnswerQuestion9();
     question10();
-    addCorrectAnswerQuestion10();
     question11();
-    addCorrectAnswerQuestion11();
     question12();
-    addCorrectAnswerQuestion12();
     question13();
     question14();
-    addCorrectAnswerQuestion14();
     question15();
-    addCorrectAnswerQuestion15();
     question16();
-    addCorrectAnswerQuestion16();
     question17();
-    addCorrectAnswerQuestion17();
     question18();
-    addCorrectAnswerQuestion18();
     question19();
-    addCorrectAnswerQuestion19();
     question20();
-    addCorrectAnswerQuestion20();
-    // question21();
-    addCorrectAnswerQuestion21();
+    question21();
     question22();
-    addCorrectAnswerQuestion22();
     question23();
-    addCorrectAnswerQuestion23();
 };
