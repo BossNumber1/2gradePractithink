@@ -1569,19 +1569,95 @@ function question5() {
 
 // 6 QUESTION
 
-let numbers6 = {
-    firstNumber: "",
+let selectedButton6 = {
+    firstBtn6: "right",
+    secondBtn6: "",
+    thirdBtn6: "",
+    fourthBtn6: "",
+    fifthBtn6: "",
+    sixthBtn6: "",
+    seventhBtn6: "",
+    eighthBtn6: "",
 };
 
-// gettingDataFromFields(1, [8], 6, numbers6);
+document.getElementById("firstBtn6").onclick = function () {
+    document.getElementById("firstBtn6").classList.toggle("selectedCircle");
+
+    selectedButton6.firstBtn6 = "right";
+};
+
+document.getElementById("secondBtn6").onclick = function () {
+    document.getElementById("secondBtn6").classList.toggle("selectedCircle");
+
+    selectedButton6.secondBtn6 = "wrong";
+};
+
+document.getElementById("thirdBtn6").onclick = function () {
+    document.getElementById("thirdBtn6").classList.toggle("selectedCircle");
+
+    selectedButton6.thirdBtn6 = "right";
+};
+
+document.getElementById("fourthBtn6").onclick = function () {
+    document.getElementById("fourthBtn6").classList.toggle("selectedCircle");
+
+    selectedButton6.fourthBtn6 = "wrong";
+};
+
+document.getElementById("fifthBtn6").onclick = function () {
+    document.getElementById("fifthBtn6").classList.toggle("selectedCircle");
+
+    selectedButton6.fifthBtn6 = "right";
+};
+
+document.getElementById("sixthBtn6").onclick = function () {
+    document.getElementById("sixthBtn6").classList.toggle("selectedCircle");
+
+    selectedButton6.sixthBtn6 = "wrong";
+};
+
+document.getElementById("seventhBtn6").onclick = function () {
+    document.getElementById("seventhBtn6").classList.toggle("selectedCircle");
+
+    selectedButton6.seventhBtn6 = "right";
+};
+
+document.getElementById("eighthBtn6").onclick = function () {
+    document.getElementById("eighthBtn6").classList.toggle("selectedCircle");
+
+    selectedButton6.eighthBtn6 = "wrong";
+};
 
 function question6() {
-    if (numbers6.firstNumber != "") {
-        succerrorAndCreateMiniIcon(1, 6, numbers6);
+    let selectedButtons = [],
+        namesSelectedButtons = [],
+        isTheArrayEmpty = 0;
+
+    for (let key in selectedButton6) {
+        if (selectedButton6[key] !== "") {
+            selectedButtons.push(selectedButton6[key]);
+            namesSelectedButtons.push(key);
+            isTheArrayEmpty++;
+        }
+    }
+
+    if (isTheArrayEmpty > 0) {
+        namesSelectedButtons.map((el, index) => {
+            if (selectedButtons[index] === "wrong") {
+                document.getElementById(el).style.border = "2px solid #ED7777";
+            } else {
+                document.getElementById(el).style.border = "2px solid #48B736";
+            }
+        });
 
         // выносим общий статус к номеру вопроса
 
-        if (numbers6.firstNumber === "right") {
+        if (
+            selectedButton6.firstBtn6 === "right" &&
+            selectedButton6.thirdBtn6 === "right" &&
+            selectedButton6.fifthBtn6 === "right" &&
+            selectedButton6.seventhBtn6 === "right"
+        ) {
             addImage(
                 "success",
                 document.getElementsByClassName("question6"),
@@ -1599,7 +1675,9 @@ function question6() {
             // addCorrectAnswerQuestion6();
         }
     } else {
-        highlightUnselectedBlocks(1, 6, numbers6);
+        document.getElementById("firstBtn6").classList.remove("selectedCircle");
+        document.getElementsByClassName("content6")[0].style.border =
+            "1px solid #FFB47D";
     }
 }
 
@@ -2661,7 +2739,7 @@ document.getElementById("submit").onclick = function () {
     addCorrectAnswerQuestion4();
     question5();
     addCorrectAnswerQuestion5();
-    // question6();
+    question6();
     addCorrectAnswerQuestion6();
     question7();
     addCorrectAnswerQuestion7();
