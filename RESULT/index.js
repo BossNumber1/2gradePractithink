@@ -2764,6 +2764,80 @@ function question22() {
     }
 }
 
+// 23 QUESTION
+
+function question23() {
+    let necessaryPlace1 = document.getElementsByClassName("emptyPlace23")[0];
+    let necessaryPlace2 = document.getElementsByClassName("emptyPlace23")[1];
+    let necessaryPlace3 = document.getElementsByClassName("emptyPlace23")[2];
+    let necessaryPlace4 = document.getElementsByClassName("emptyPlace23")[3];
+
+    let nameChild1 = necessaryPlace1.children[0].id.slice(0, -1);
+    let nameChild2 = necessaryPlace2.children[0].id.slice(0, -1);
+    let nameChild3 = necessaryPlace3.children[0].id.slice(0, -1);
+    let nameChild4 = necessaryPlace4.children[0].id.slice(0, -1);
+
+    if (
+        nameChild1 !== "emptyPlace" &&
+        nameChild2 !== "emptyPlace" &&
+        nameChild3 !== "emptyPlace" &&
+        nameChild4 !== "emptyPlace"
+    ) {
+        if (
+            nameChild1 === "triangle" &&
+            nameChild2 === "trapezium" &&
+            nameChild3 === "pentagon" &&
+            nameChild4 === "hexagon"
+        ) {
+            addImage(
+                "success",
+                document.getElementsByClassName("question23"),
+                "app23",
+                23
+            );
+        } else {
+            if (nameChild1 !== "triangle") {
+                necessaryPlace1.style.border = "2px solid #ED7777";
+            }
+
+            if (nameChild2 !== "trapezium") {
+                necessaryPlace2.style.border = "2px solid #ED7777";
+            }
+
+            if (nameChild3 !== "pentagon") {
+                necessaryPlace3.style.border = "2px solid #ED7777";
+            }
+
+            if (nameChild4 !== "hexagon") {
+                necessaryPlace4.style.border = "2px solid #ED7777";
+            }
+
+            addImage(
+                "failure",
+                document.getElementsByClassName("question23"),
+                "app23",
+                23
+            );
+        }
+    } else {
+        if (nameChild1 === "emptyPlace") {
+            necessaryPlace1.style.border = "2px solid #FFB47D";
+        }
+
+        if (nameChild2 === "emptyPlace") {
+            necessaryPlace2.style.border = "2px solid #FFB47D";
+        }
+
+        if (nameChild3 === "emptyPlace") {
+            necessaryPlace3.style.border = "2px solid #FFB47D";
+        }
+
+        if (nameChild4 === "emptyPlace") {
+            necessaryPlace4.style.border = "2px solid #FFB47D";
+        }
+    }
+}
+
 // RESULT
 
 document.getElementById("submit").onclick = function () {
@@ -2810,6 +2884,6 @@ document.getElementById("submit").onclick = function () {
     addCorrectAnswerQuestion21();
     question22();
     addCorrectAnswerQuestion22();
-    // question23();
+    question23();
     addCorrectAnswerQuestion23();
 };

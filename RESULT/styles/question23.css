@@ -70,8 +70,8 @@
 .emptyPlace23 {
     width: 70px;
     height: 70px;
-    background: #f4f4f4;
+    /* background: #f4f4f4;
     border: 1px solid #d0d0d0;
-    box-sizing: border-box;
-    margin: 5px 0px;
+    box-sizing: border-box; */
+    /* margin: 5px 0px; */
 }
