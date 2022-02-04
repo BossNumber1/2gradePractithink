@@ -94,7 +94,7 @@
     line-height: 29px;
 }
 
-.firstRow11 div {
+.firstRow11 div:not(.statusMiniIcon) {
     display: flex;
     flex-direction: row;
     justify-content: center;

@@ -1732,42 +1732,37 @@ function question10() {
 
 // 11 QUESTION
 
-let numbers11 = {
-    firstNumber: "",
-    secondNumber: "",
-    thirdNumber: "",
-    fourthNumber: "",
-    fifthNumber: "",
-    sixthNumber: "",
-};
-
-// gettingDataFromFields(
-//     6,
-//     ["1", "20/21", "3/10", "14/15", "8/5", "5/6"],
-//     11,
-//     numbers11
-// );
-
 function question11() {
+    // получаем содежимое блоков
+    let firstPlace11 =
+        document.getElementsByClassName("firstRow11")[0].children[0].id;
+    let secondPlace11 =
+        document.getElementsByClassName("firstRow11")[0].children[1].id;
+    let thirdPlace11 =
+        document.getElementsByClassName("firstRow11")[0].children[2].id;
+    let fourthPlace11 =
+        document.getElementsByClassName("firstRow11")[0].children[3].id;
+    let fifthPlace11 =
+        document.getElementsByClassName("firstRow11")[0].children[4].id;
+    let sixthPlace11 =
+        document.getElementsByClassName("firstRow11")[0].children[5].id;
+
     if (
-        numbers11.firstNumber !== "" &&
-        numbers11.secondNumber !== "" &&
-        numbers11.thirdNumber !== "" &&
-        numbers11.fourthNumber !== "" &&
-        numbers11.fifthNumber !== "" &&
-        numbers11.sixthNumber !== ""
+        firstPlace11 !== "firstEmpty11" &&
+        secondPlace11 !== "secondEmpty11" &&
+        thirdPlace11 !== "thirdEmpty11" &&
+        fourthPlace11 !== "fourthEmpty11" &&
+        fifthPlace11 !== "fifthEmpty11" &&
+        sixthPlace11 !== "sixthEmpty11"
     ) {
-        succerrorAndCreateMiniIcon(6, 11, numbers11);
-
-        // выносим общий статус к номеру вопроса
-
+        // проверяем на верность для создания статуса
         if (
-            numbers11.firstNumber === "right" &&
-            numbers11.secondNumber === "right" &&
-            numbers11.thirdNumber === "right" &&
-            numbers11.fourthNumber === "right" &&
-            numbers11.fifthNumber === "right" &&
-            numbers11.sixthNumber === "right"
+            firstPlace11 === "sixthBtn11" &&
+            secondPlace11 === "secondBtn11" &&
+            thirdPlace11 === "thirdBtn11" &&
+            fourthPlace11 === "fourthBtn11" &&
+            fifthPlace11 === "fifthBtn11" &&
+            sixthPlace11 === "firstBtn11"
         ) {
             addImage(
                 "success",
@@ -1776,6 +1771,78 @@ function question11() {
                 11
             );
         } else {
+            if (firstPlace11 !== "sixthBtn11") {
+                document.getElementById(firstPlace11).style.border =
+                    "2px solid #ED7777";
+
+                addMiniIcon(document.getElementById(firstPlace11), "failure");
+            } else if (firstPlace11 === "sixthBtn11") {
+                document.getElementById(firstPlace11).style.border =
+                    "2px solid #9DD765";
+
+                addMiniIcon(document.getElementById(firstPlace11), "success");
+            }
+
+            if (secondPlace11 !== "secondBtn11") {
+                document.getElementById(secondPlace11).style.border =
+                    "2px solid #ED7777";
+
+                addMiniIcon(document.getElementById(secondPlace11), "failure");
+            } else if (secondPlace11 === "secondBtn11") {
+                document.getElementById(secondPlace11).style.border =
+                    "2px solid #9DD765";
+
+                addMiniIcon(document.getElementById(secondPlace11), "success");
+            }
+
+            if (thirdPlace11 !== "thirdBtn11") {
+                document.getElementById(thirdPlace11).style.border =
+                    "2px solid #ED7777";
+
+                addMiniIcon(document.getElementById(thirdPlace11), "failure");
+            } else if (thirdPlace11 === "thirdBtn11") {
+                document.getElementById(thirdPlace11).style.border =
+                    "2px solid #9DD765";
+
+                addMiniIcon(document.getElementById(thirdPlace11), "success");
+            }
+
+            if (fourthPlace11 !== "fourthBtn11") {
+                document.getElementById(fourthPlace11).style.border =
+                    "2px solid #ED7777";
+
+                addMiniIcon(document.getElementById(fourthPlace11), "failure");
+            } else if (fourthPlace11 === "fourthBtn11") {
+                document.getElementById(fourthPlace11).style.border =
+                    "2px solid #9DD765";
+
+                addMiniIcon(document.getElementById(fourthPlace11), "success");
+            }
+
+            if (fifthPlace11 !== "fifthBtn11") {
+                document.getElementById(fifthPlace11).style.border =
+                    "2px solid #ED7777";
+
+                addMiniIcon(document.getElementById(fifthPlace11), "failure");
+            } else if (fifthPlace11 === "fifthBtn11") {
+                document.getElementById(fifthPlace11).style.border =
+                    "2px solid #9DD765";
+
+                addMiniIcon(document.getElementById(fifthPlace11), "success");
+            }
+
+            if (sixthPlace11 !== "firstBtn11") {
+                document.getElementById(sixthPlace11).style.border =
+                    "2px solid #ED7777";
+
+                addMiniIcon(document.getElementById(sixthPlace11), "failure");
+            } else if (sixthPlace11 === "firstBtn11") {
+                document.getElementById(sixthPlace11).style.border =
+                    "2px solid #9DD765";
+
+                addMiniIcon(document.getElementById(sixthPlace11), "success");
+            }
+
             addImage(
                 "failure",
                 document.getElementsByClassName("question11"),
@@ -1786,7 +1853,7 @@ function question11() {
             // addCorrectAnswerQuestion11();
         }
     } else {
-        highlightUnselectedBlocks(6, 11, numbers11);
+        highlightingUnfillededBlocks(6, 11);
     }
 }
 
@@ -2562,7 +2629,7 @@ document.getElementById("submit").onclick = function () {
     addCorrectAnswerQuestion9();
     question10();
     addCorrectAnswerQuestion10();
-    // question11();
+    question11();
     addCorrectAnswerQuestion11();
     question12();
     addCorrectAnswerQuestion12();
