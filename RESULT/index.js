@@ -101,6 +101,12 @@ function addMiniIcon(elem, status) {
             elem.offsetLeft + widthAdjacentElement / 2 - 23 + "px";
     }
 
+    if (elem.parentElement.parentElement.className === "fourthRow12") {
+        objDiv.style.marginTop = "-20px";
+        objDiv.style.marginLeft =
+            elem.offsetLeft + widthAdjacentElement / 2 - 7 + "px";
+    }
+
     if (elem.parentElement.parentElement.className === "content14") {
         objDiv.style.marginTop = "-55px";
     }
@@ -144,15 +150,6 @@ function addMiniIcon(elem, status) {
             .className === "content22"
     ) {
         objDiv.style.marginTop = "-23px";
-    }
-
-    if (
-        elem.parentElement.firstElementChild.id === "secondNumber12" ||
-        elem.parentElement.firstElementChild.id === "thirdNumber12" ||
-        elem.parentElement.firstElementChild.id === "fourthNumber12"
-    ) {
-        objDiv.style.marginTop = "90px";
-        objDiv.style.marginLeft = elem.offsetLeft - 100 + "px";
     }
 
     objDiv.style.marginRight = rightIndent;
@@ -1883,6 +1880,12 @@ function question11() {
 
 // 12 QUESTION
 
+let numbers12 = {
+    firstNumber: "",
+};
+
+gettingDataFromFields(1, [10], 12, numbers12);
+
 function question12() {
     // получаем содежимое блоков
     let firstPlace12 =
@@ -1899,6 +1902,7 @@ function question12() {
         document.getElementsByClassName("firstRow12")[0].children[5].id;
 
     if (
+        numbers12.firstNumber !== "" &&
         firstPlace12 !== "firstEmpty12" &&
         secondPlace12 !== "secondEmpty12" &&
         thirdPlace12 !== "thirdEmpty12" &&
@@ -1906,8 +1910,11 @@ function question12() {
         fifthPlace12 !== "fifthEmpty12" &&
         sixthPlace12 !== "sixthEmpty12"
     ) {
+        succerrorAndCreateMiniIcon(1, 12, numbers12);
+
         // проверяем на верность для создания статуса
         if (
+            numbers12.firstNumber === "right" &&
             firstPlace12 === "firstBtn12" &&
             secondPlace12 === "fourthBtn12" &&
             thirdPlace12 === "sixthBtn12" &&
@@ -2004,7 +2011,18 @@ function question12() {
             // addCorrectAnswerQuestion12();
         }
     } else {
-        highlightingUnfillededBlocks(6, 12);
+        if (
+            firstPlace12 === "firstEmpty12" &&
+            secondPlace12 === "secondEmpty12" &&
+            thirdPlace12 === "thirdEmpty12" &&
+            fourthPlace12 === "fourthEmpty12" &&
+            fifthPlace12 === "fifthEmpty12" &&
+            sixthPlace12 === "sixthEmpty12"
+        ) {
+            highlightingUnfillededBlocks(6, 12);
+        }
+
+        highlightUnselectedBlocks(1, 12, numbers12);
     }
 }
 
