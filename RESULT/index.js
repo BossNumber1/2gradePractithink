@@ -939,6 +939,35 @@ function drop4(e) {
     }
 }
 
+// 9 QUESTION
+
+function drag9(e) {
+    localStorage.setItem("idTakenCube9", e.target.id);
+    localStorage.setItem("nameCube9", e.target.dataset.name);
+}
+
+function drop9(e) {
+    // получаем id и имя несомого элемента
+    let idTakenCube = localStorage.getItem("idTakenCube9");
+    let nameCube = localStorage.getItem("nameCube9");
+
+    // берем id того элемента, на который положим несомый
+    let currentId = e.target.id;
+    let currentName = e.target.dataset.name;
+
+    // меняем картинки местами
+    let orig = document.getElementById(idTakenCube);
+    orig.src = "./pictures/9que/" + currentName + ".svg";
+    orig.id = currentId;
+    orig.setAttribute("data-name", currentName);
+    orig.parentElement.style.cursor = "default";
+
+    e.target.src = "./pictures/9que/" + nameCube + ".svg";
+    e.target.id = idTakenCube;
+    e.target.setAttribute("data-name", nameCube);
+    e.target.parentElement.style.cursor = "grab";
+}
+
 // 12 QUESTION
 
 function drag12(e) {
