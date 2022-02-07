@@ -87,3 +87,7 @@
     border-radius: 5px;
     text-align: center;
 }
+
+.expression4:not(input) {
+    font-size: 30px;
+}
